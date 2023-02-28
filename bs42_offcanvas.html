@@ -1,0 +1,91 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <button class="btn btn-primary" data-bs-target="#ornek1" data-bs-toggle="offcanvas">offcanvas 1</button>
+
+    <div class="offcanvas offcanvas-bottom" id="ornek1" data-bs-backdrop="false">
+        <!-- todo offcanvas bileşenin sayfanın neresinde açılacağını belirtmek için offcanvas-x(position) class'ları kulllanılır, bunlar top, bottom, start ve end 'dir. -->
+        <!-- * burada data-bs-backdrop="false" diyerek şunu demiş olduk: "ben offcanvas bileşeninin sayfanın boş bir yerinde tıklandığında kapanmasını istemiyorum, yalnızca kapatma butonuna basarak kapatılsın", varsayılan değeri "true" 'dur-->
+        <!-- ? id="ornek1" değerini ise yukarıdaki offcanvas2ı açan butonla ilişkilendirmek için oluşturduk. -->
+
+        <div class="offcanvas-header">
+            <!-- todo offcanvas'ın o başlık kısmını oluşturmak için "offcanvas" class'ına sahip kapsayıcı div'in altına "offcanvas-header" class'ına sahip başka bir div oluşturulur. -->
+            <h1 class="offcanvas-title">offcanvas 1 başlığı</h1>
+
+            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            <!-- todo header'ın sağ tarafında bulunan "x" kapanma butonunu şekil olarak oluşturmak için "btn-close" class'ını veririz. -->
+
+            <!-- * butonun neyi kapatacağını belirtmek için ise data-bs-dismiss="offcanvas" yazarız.   -->
+        </div>
+        <div class="offcanvas-body">
+            <!-- todo offcanvas bileşenin gövdesini oluşturmak için ise offcanvas class'ına sahip div'in altına "offcanvas-body" class'ına sahip başka bir div oluşturulur. -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit labore recusandae repudiandae illo
+            minus
+            possimus quisquam debitis laudantium. Esse provident facere nesciunt aperiam sed velit, quaerat ea
+            excepturi cupiditate eius!
+            Provident dolorum ea accusantium harum nobis aperiam numquam velit, animi doloribus. Aliquam iusto,
+            quo
+            aut praesentium facere ullam! Dignissimos voluptate possimus sunt accusantium qui quae fugit modi
+            magnam
+            aliquid iusto.
+        </div>
+    </div>
+    <!-- ! --------------------------------------------------------------------------------------------->
+    <a href="#ornek2" class="btn btn-danger" data-bs-toggle="offcanvas">offcanvas 2</a>
+
+    <div class="offcanvas offcanvas-start" id="ornek2">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title">offcanvas 2 başlığı</h2>
+            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, facere asperiores assumenda
+            aspernatur quasi accusamus impedit ex repellat numquam consequatur, nulla sunt molestias ratione quo
+            quisquam quibusdam nemo dolores blanditiis!
+            Quaerat porro, delectus eveniet natus a, mollitia, sapiente ex dolor doloremque reprehenderit consequuntur
+            iure necessitatibus obcaecati quia distinctio voluptas adipisci magni est dicta explicabo dolorum. Nulla
+            magni consequuntur officiis laboriosam.
+        </div>
+    </div>
+    <!-- ! --------------------------------------------------------------------------------------------->
+
+    <a href="#ornek3" class="btn btn-warning" data-bs-toggle="offcanvas">offcanvas 3</a>
+
+    <div class="offcanvas text-bg-dark" id="ornek3">
+        <div class="offcanvas-header">
+            <h2>offcanvas 3 başlığı</h2>
+            <button class="btn btn-light btn-close text-bg-light" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos modi id ratione non unde fugiat doloremque
+            repellendus architecto voluptatibus maiores iure impedit ipsam, error sed iste aliquid deserunt eos
+            assumenda!
+            Ab at nostrum beatae reprehenderit sapiente necessitatibus enim facere deserunt expedita natus inventore
+            magnam exercitationem quod, fuga sint quo itaque saepe eius, tenetur tempora eligendi! Pariatur itaque
+            corrupti recusandae dicta.
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

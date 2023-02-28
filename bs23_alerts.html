@@ -1,0 +1,85 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="alert alert-danger">
+   Bu normal bir alert'tir.
+</div>
+<!-- * kullanıcı hatalı, eksik veya istenmeyen bir işlem yaptığında ona uyarı çıkartmamız gerekir. İşte bootstrap 5'te bu uyarı nesnesini oluşturmak için alert class'ın ve onunla bağlantılı diğer class'ları kullanmalıyız. -->
+
+<div class="alert alert-warning">
+    Burada alert ile birlikte <code>strong</code> ve <code>b</code> etiketi gösterilmiştir, yazıyı <strong>kalın yapmaya</strong>  yarar.
+</div>
+<div class="alert alert-primary">
+    Burada alert ile birlikte <code>code</code> etiketi gösterilmiştir, kodları, etiketleri vurgulamaya yarar.
+    
+</div>
+<div class="alert alert-secondary">
+    Burada alert ile birlikte <abbr title="herhangi bir metinle ilgili açıklama yazmaya, kısaltmaların anlamlarını fare iligli metnin üzerine gelince gçstermeye yarar">abbr</abbr> etiketi gösterilmiştir 
+    
+</div>
+
+<div class="alert alert-light">
+    Burada alert ile birlikte <code>kbd </code> etiketi gösterilmiştir. Bu etiket <kbd>Ctrl+Shift+Del</kbd> gibi klavyo kısayol tuşlarının vurgulanmasını sağlar.
+</div>
+<div class="alert">
+    Burada alert ile birlikte <code>i</code> etiketi ve <code>em</code> gösterilmiştir, bu <em>yazıyı eğik yazmaya</em> yarar.
+</div>
+<div class="alert">
+    Burada alert ile birlikte <code>mark</code> etiketi gösterilmiştir, bu yazıyı <mark>vurgulamaya</mark> yarar.
+</div>
+<div class="alert alert-success">
+    Burada alert ile birlikte <code>small</code> etiketi gösterilmiştir, bu yazıyı <small>küçültmeye</small> yarar.
+</div>
+<div class="alert alert-dark">
+    Burada alert ile birlikte <code>pre</code> etiketi gösterilmiştir,
+    <pre> bu etiket yazının html sayfasında 
+    nasıl  yazılmış ise o şekilde           göstermeye yarar, kendi kendine düzeltme
+    yapmaz.     Bu etiketin içindeki yazı her ne şekilde yazılmışsa 
+    onu girintisiyle, boşluğuyla, satır         kesmeleriyle birlikte aynen gösterir.
+    </pre>
+</div>
+<div class="alert alert-info">
+    <blockquote class="blockquote">
+        <p>Bir berber bir berbere bre berber gel bir <code>blockquote</code> etiketi açalım demiş.</p>
+        <footer class="blockquote-footer">Anonim</footer>
+    </blockquote>
+</div>
+<!-- todo şidmiye kadar sadece alert ve alert-danger gibi class'ları html biçimlendirme etiketleriyle birlikte kullandık, şimdi ise bu alertlerle farklı , daha karmaşık işlemler yapacağız  -->
+
+<div class="alert alert-warning  alert-dismissible">
+    <!-- * burada alert-dismissible yazarak bu alert'in kapatılabilir olduğunu belirttik, fakat bu tek başına yetmez biz ayrıca, alert class'ını verdiğimiz kapsayıcı içine button etiketi yazdık daha sonra onun class'ına "btn-close" dedik böylelikle sağ tarafa X işareti geldi ama o işarete tıklayınca kapanabilmesi içinde data-bs-dismiss="alert" yazdık. -->
+
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, repellendus!
+    <button class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+
+
+
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+</div>
+<!-- ! bu kısım direkt bootstrap eklentileri kullanarak oluşturulmuş otomatik bir alert  nesnesi. Aslında bu tür yapılar böyle kısayollarla getirtmek çok daha faydalıdır çünkü her şey kendiliğinden oluşuyor bize sadece içeriğini düzenlemek kalıyor. Ayrıca bizim önemsemediğimiz ama ekran okuyucu okuduğu için gözleri iyi görmeyenler için önemli olan aria-label="close", role="alert" gibi sınıfları da oluşturuyor  -->
+
+<div class="alert alert-secondary alert-dismissible">
+    <a href="" class=" alert-link alert-li">Murat Gözen</a>
+    <!-- todo burada alert-link class'ını ise alert verdiğimiz kapsayıcı içinde bir uyarı linki oluşturmak için kullanırız, bu alert-link class'ını kapsayıcı içindeki a etiketinin içine yazarız  -->
+    <div type="button" class="btn-close" data-bs-dismiss="alert"></div>
+</div>
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

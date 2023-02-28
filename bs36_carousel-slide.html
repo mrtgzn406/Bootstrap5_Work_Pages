@@ -1,0 +1,143 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- * bu sayfada carousel slide yapımı analtılacaktır, carousel yapılırken resimlerin boyutunun eşit olmasına dikkat edilmelidir, resim değiştirilirken resim boyutunda da değişikliklek meydana gelirse slayt güzel görünmez ve ileri geri ikonlarında kaymalar olur. carousel daha çok resimlerle estetik bir slayt oluşturmak için kullanılır. -->
+
+    <div class="carousel w-25 mx-auto my-5 " id="slide1" data-bs-ride="carousel">
+        <!-- todo ilk başta en dış kapsayıcı olarak "carousel" class'lı bir div oluşturuyoruz. Carousel ile ilgili geri kalan her şeyi bu etiketin arasına yazılacaktır. Ayrıca bu kapsayıcıya bir id atıyoruz ve slaytların kend kendine geçmesi için ise data-bs-ride="carousel" özelliğini ekliyoruz, bu özellik eklenmezse slaytlar arasında geçiş yapmak için tıklamak gerekir veya telefonda isek dokunarak kaydırmak gerekir.  -->
+        <div class="carousel-inner">
+            <!-- todo burada ise kapsayıcının içine girip "carousel-inner" adlı bir etiket oluşturduk, bu etiket ise carousel'in içeriği, resimlerini ele alacak. -->
+            <div class="carousel-item active">
+                <!-- todo burada ise carousel'in içine yerleştirilecek her bir resim için carousel-inner'in arasına "carousel-item" class'lı bir div oluşturduk. slayt ilk başladığında hangi resmin görünmesini istiyorsak ona "active" class'ını verdik -->
+                <img src="../../images/pexels-1.jpg" alt="" class="d-block w-100">
+                <!-- todo burada ise carousel-item'on içine bir resim ekledik ve kapsayıcısının genişliğini alsın diye w-100 ve d-block class'larını verdik. -->
+            </div>
+            <div class="carousel-item">
+                <img src="../../images/pexels-2.jpg" alt="" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="../../images/pexels-3.jpg" alt="" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+
+                <img src="../../images/pexels-4.jpg" alt="" class="d-block w-100">
+            </div>
+        </div> <!-- carousel inner end -->
+        <button class="carousel-control-prev" data-bs-target="#slide1" data-bs-slide="prev">
+            <!-- todo burada ise slaytın sol ve sağ tarafına basıldığında slaytların geçmesini sağlayan butonları oluşturuyoruz. butona class olarak "carousel-control-prev" yazıyoruz böylece ona "resmin sol tarafında bir kısmı baştan aşağı kapla" demiş olduk.
+                bu "carousel-control-x" kısmına yazılabilecek 2 ifade vardır, bunlar:
+            carousel-control-prev (butonun sol tarafı yukarıdan aşağıya kaplamasını sağlar.) ve
+            carousel-control-next (butonun sağ tarafı yukarıdan aşağı kaplamasını sağlar.)
+             -->
+            <span class="carousel-control-prev-icon h-100 w-50"></span>
+            <!-- todo burada ise butonun içine bir span etiketi oluşturduk ve class'ına "carousel-control-prev-icon" yazdık böylece "önceki" ikonunu getirdik. Sonrasında ise ikonun boyutunu büyütmek için h-100 ve w-50 verdik.
+                bu "carousel-control-x-icon" kısmına yazılabilecek 2 ifade vardır bunlar:
+            carousel-control-prev-icon, (önceki ikonunu oluşturur)
+            carousel-control-next-icon (sonraki ikonunu oluşturur) ifadesidir. -->
+        </button>
+        <button class="carousel-control-next" data-bs-target="#slide1" data-bs-slide="next">
+            <span class="carousel-control-next-icon w-50 h-100"></span>
+        </button>
+    </div> <!-- carousel end -->
+
+    <!-- ! ----------------------------------------------------------------------------------------------------->
+
+    <div class="carousel slide w-25 mx-auto" id="slide2" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <!-- todo burada ise carousel slaytına bir resmin alt kısmında çizgiler şeklinde görünen indikatörler ekledik. hangi resmin hangi indikatörle bağlantılı olduğunu bildirmek için ise data-bs-slide-to="" özelliğini kullandık ve indeks numarası mantığıyla 0'dan başlayıp her bir resim için ayrı indikatör oluşturduk -->
+            <button class="active " data-bs-target="#slide2" data-bs-slide-to="0"></button>
+            <button data-bs-target="#slide2" data-bs-slide-to="1"></button>
+            <button data-bs-target="#slide2" data-bs-slide-to="2"></button>
+            <button data-bs-target="#slide2" data-bs-slide-to="3"></button>
+        </div>
+        <!-- *carousel-indicators end-->
+
+        <div class="carousel-inner">
+            <div class="carousel-item"><img src="../../images/pexels-1.jpg" alt="" class="d-block w-100"></div>
+            <div class="carousel-item"><img src="../../images/pexels-2.jpg" alt="" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <!-- todo burada ise img nin hemen altına ve "carousel-item" class'ına sahip bir yapı içinde "carousel-caption" oluşturduk  ve o etiketin içinde yazı yazdık, böylece yazı resmin aşağı kısmında görünebilir -->
+                    <h5>özlü söz</h5>
+                    <p>Sizin yargınız benim infazıma yetmedi aslanım</p>
+                </div>
+            </div>
+            <div class="carousel-item active"><img src="../../images/pexels-3.jpg" alt="" class="d-block w-100"></div>
+            <div class="carousel-item"><img src="../../images/pexels-4.jpg" alt="" class="d-block w-100"></div>
+        </div>
+        <!-- *carousel-inner end -->
+
+        <button class="carousel-control-prev" data-bs-target="#slide2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon h-100 w-50"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#slide2" data-bs-slide="next">
+            <span class="carousel-control-next-icon h-100 w-50"></span>
+        </button>
+        <!-- *carousel control buttons and icons end -->
+    </div>
+    <!-- *carousel end -->
+    <!-- ! ---------------------------------------------------------------------------------------------------------->
+    <div class="carousel carousel-dark slide carousel-fade w-25 mx-auto" id="slide3">
+        <!-- todo eğer carousel nesnesinin renk temasını koyu yapmak istiyorsak "carousel-dark" class'ını, slaytlar geçiş yaparken solarak geçsin istiyorsak "carousel-fade" claa'ını ekleriz. -->
+
+        <div class="carousel-indicators">
+            <button class="active" data-bs-target="#slide3" data-bs-slide-to="0"></button>
+            <button data-bs-target="#slide3" data-bs-slide-to="1"></button>
+            <button data-bs-target="#slide3" data-bs-slide-to="2"></button>
+            <button data-bs-target="#slide3" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="../../images/pexels-1.jpg" alt="" class="w-100">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="../../images/pexels-2.jpg" alt="" class="w-100">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="../../images/pexels-3.jpg" alt="" class="w-100">
+                <div class="carousel-caption">
+                    <p>bundan sonra benim dediğim olur burada bu da böyle biline</p>
+                </div>
+                <!-- todo carousel'deki herhangi bir resme yazı eklemek istersek o zaman da carousel-item'ın arasına bir div oluşturup class'ına "carousel-caption" yazar sonra arasına metni yazarız -->
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="../../images/pexels-4.jpg" alt="" class="w-100">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" data-bs-target="#slide3" data-bs-slide="prev">
+            <span class="bi bi-arrow-left-circle fs-1"></span>
+            <!-- todo istersek span etiketinin içine "carousel-control-prev-icon" yazmak yerine bootstrap ikonlarını getirmek için gerekli linki üste head eitketlerinin arasına yapıştırdıktan sonra bootstrap sitesindeki ikonlarını span etiketine class olarak yazarak o ikonları getirebiliriz. fs-x gibi font size özelliğini ayarlayan class'larla da ikonu büyütüp küçültebiliriz.  -->
+        </button>
+        <button class="carousel-control-next" data-bs-target="#slide3" data-bs-slide="next">
+            <span class="bi bi-arrow-right-circle fs-1"></span>
+        </button>
+
+
+
+
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

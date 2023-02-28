@@ -1,0 +1,92 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li class="nav-item"><a href="" class="nav-link">anasayfa</a></li>
+        <li class="nav-item"><a href="" class="nav-link">biz</a></li>
+        <li class="nav-item">
+            <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">projelerimiz</a>
+            <ul class="dropdown-menu">
+                <li><a href="" class="dropdown-item">ben</a></li>
+                <li><a href="" class="dropdown-item">sen</a></li>
+                <li><a href="" class="dropdown-item">onlar</a></li>
+                <li><a href="" class="dropdown-item">şunlar</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="" class="nav-link">iletişim</a></li>
+    </ul>
+    <!-- todo sekmelere dropdown ekleme böyle yapılır.-->
+
+    <!--  !----------------------------------------------------------------------------------------------------->
+
+
+    <div class="d-flex border-3 border-danger ">
+        <ul class="nav flex-column me-5 nav-tabs nav-justified ">
+            <li class="nav-item"><button class="nav-link" data-bs-target="#anasayfa"
+                    data-bs-toggle="tab">anasayfa</button>
+            </li>
+            <li class="nav-item"><button class="nav-link" data-bs-target="#iletişim"
+                    data-bs-toggle="tab">iletişim</button>
+            </li>
+            <li class="nav-item"><button class="nav-link" data-bs-target="#sorunlar"
+                    data-bs-toggle="tab">sorunlar</button>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" id="anasayfa">
+                <h4>anasayfa içeriği</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ex earum animi perspiciatis. Quisquam
+                    sit itaque officiis vero corrupti nobis nostrum soluta delectus, in facilis repellendus voluptas
+                    quod doloremque aperiam!
+                    Reiciendis corporis minima veritatis doloremque accusantium quaerat ratione amet dolor unde debitis
+                    ipsa impedit atque architecto sequi, possimus autem, quas in vel ducimus! Corporis molestiae impedit
+                    eius libero saepe est.</p>
+            </div>
+            <div class="tab-pane" id="iletişim">
+                <h4>iletişim</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat. Illo facere harum impedit
+                    ut
+                    dolor eaque rerum perspiciatis molestias, mollitia voluptate nemo fugiat non obcaecati error
+                    accusantium, id quam.
+                    Dicta, saepe. Sint quasi maiores labore ipsum! Sed, temporibus? Ipsam et atque corporis fugiat ullam
+                    non
+                    repudiandae! Quia, similique pariatur saepe, ad quidem asperiores incidunt alias quas, adipisci
+                    tenetur
+                    numquam?</p>
+            </div>
+            <div class="tab-pane" id="sorunlar">
+                <h4>sorunlar</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iste dolor eveniet quibusdam,
+                    suscipit exercitationem voluptates error sunt autem velit sed commodi quaerat laborum nam
+                    dignissimos
+                    illum a hic mollitia.
+                    Officiis delectus aut molestias perspiciatis laborum obcaecati vel eius doloremque, ratione fugiat
+                    veniam aperiam, magnam, totam voluptatibus earum! Quibusdam a cupiditate possimus sed excepturi
+                    voluptates assumenda suscipit odit ex autem.</p>
+            </div>
+        </div>
+    </div>
+    <!-- todo bootstrap5'te dinamik sekme ise böyle yapılır, biz ayrıca bu dinamik sekmeyi bir dış kapsayıcı verip class'ına d-flex yazarak dikey değilde yatay şekilde gösttermeyi sağladık -->
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ben {
+            color: white !important;
+        }
+
+        #ben:hover {
+            color: white !important;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- * bu sayfada site yapımında çokça kullandığımız menü tasarımının bootstap ile nasıl kolay yapıldığını, normalde bizi baya uğraştıracak bir yapının nasıl hazır kodlarlar yapıldığını göreceğiz -->
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fs-5 fw-bolder p-1">
+        <!-- todo burada navbar'ın kapsayıcısını oluşturmak için ilk yapmamız gereken şeyi yaptık ve "navbar" class'ını verdik.
+        ? daha sonra bu navbar butonlarının hangi genişlikten sonra görünmesi gerektiğini bildirmek için navbar-expand-sm class'ını kullandık, 
+        * ardından navbar-dark yazarak beyaz bir yazı gelmesini, navbar-light yazarak ise siyah bir yazı gelmesini sağladık.  -->
+        <!-- ! Not: Navbar'ın yazı rengi text-danger, text-success gibi class'larla değiştiremiyoruz. Ancak navbar-light, navbar-dark class'ları ile değiştirebiliyoruz -->
+
+        <div class="container">
+            <!-- todo bu container'ı veya container-fluid'i kullanırız ki sağa sola yaslanmış olan bazı navbar bileşenleri ile ekranın en kenarı aarasında boşluk oluşsun diye. -->
+
+            <a href="" class="navbar-brand"><i class="bi bi-bootstrap" style="font-size: 2rem; color: aqua;"></i></a>
+            <!-- todo burada ise bu etiketin navbar'ın logo, marka kısmını oluşturmak için "navbar-brand" class'ını kullandık . Bu navbar-brand etiketinin içine ise bootstrap'ın sitesinden aldığımız bootstrap ikonunu yerleştirdik  -->
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#icerik_1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- todo burada ise bir buton oluşturup class'ına "navbar-toggler" vererek butonun bazı biçimlendirme özellikleri almasını sağladık,
+            ? data-bs-toggle="collapse" özelliği ile bu butonun açma-kapama işini yapacağını belirledik ve data-bs-target="" özelliği ile de bu butonun hangi nesneyi açıp kapayacağını söyledik  
+            * sonra butonun arasına span etiketi oluşturup class olarak "navbar-toggler-icon" verdik böylece navbar daraldığında çıkan o tasarımı güzel ikonu elde ettik-->
+
+
+            <div class="collapse navbar-collapse" id="icerik_1">
+                <!-- todo burada collapse  class'ını navbar'ın genişliği belli bir küçüklüğe geldikten sonra menü butonlarının gizlenmesi için verdik. navbar-collapse class'ını ise navbar ile bu kısım arasında uyumluluğu sağlayacak bazı biçimlendirme , hizalama ayarları uygulansın diye verdik. İd="" özelliğini ise onu açacak butona id değerini vermek için oluşturduk -->
+
+                <ul class="navbar-nav">
+                    <!-- todo bu navbar-nav class'ını ise bu kısmın navbar'a ait bir menü olduğu bildirmek ve navbar'la uyumlu bir tasarım alması için verdik ve varsayılan olarak gelen liste deki madde işaretlerinin  alınması ve liste elemanlarının da soldan sağa sıralanması için verdik -->
+
+                    <li class="nav-item"><a href="" class="nav-link">anasayfa</a></li>
+                    <!-- todo burada li etiketindeki "nav-item" class'ını bu etiketin navbar-nav'ın bir alt oluşumu olduğunu belirtmek için,
+                    * a etiketine verilen nav-link class'ı ise a etiketlerinin navbar-nav'a göre biçimlendirmeleri vermek için  kullanılır.-->
+                    <li class="nav-item"><a href="" class="nav-link">projeler</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">hakkımızda</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">iletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- burada navbar bileşeninin en temel hali yapılmıştır -->
+    <!-- ! ----------------------------------------------------------------------------------------------------->
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary fs-4 fw-bold text-capitalize">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand">marka</a>
+            <button class="navbar-toggler" data-bs-target="#icerik_2" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="icerik_2">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">hasan</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">hüseyin</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="dropdown-item">HAYATI</a></li>
+                            <li><a href="" class="dropdown-item">ANILARI</a></li>
+                            <li><a href="" class="dropdown-item">OLAYLAR</a></li>
+                            <li><a href="" class="dropdown-item">ÖLÜMÜ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="" class="nav-link">emre</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">yusuf</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- * burada navbar içinde dropdown yapısı oluşturulmuştur -->
+    <!-- ! ----------------------------------------------------------------------------------------------------->
+    <nav class="navbar navbar-expand-md bg-danger p-2 fw-bold navbar-light   " id="ben">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand">Logo 3</a>
+            <button class="navbar-toggler" data-bs-target="#icerik_3" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="icerik_3">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">Anasayfa</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Oyunlar</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Yazılımlar</a></li>
+                    <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown">Araçlar</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="dropdown-item">driver booster</a></li>
+                            <li><a href="" class="dropdown-item">revo uninstaller</a></li>
+                            <li><a href="" class="dropdown-item">driverpack</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="" class="nav-link">İletişim</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Hakkımızda</a></li>
+                </ul>
+
+            </div>
+            <div class="d-flex">
+                <input type="search" class="form-control me-3" placeholder="Arayın...">
+                <button type="submit" class="btn btn-success shadow-lg">Ara</button>
+            </div>
+        </div>
+    </nav>
+    <!-- * burada ise navbar'ın sağ tarafına d-flex içinde bir arama kutusu ve ara butonu oluşturulmuştur. -->
+    <!-- ! -------------------------------------------------------------------------------------------->
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

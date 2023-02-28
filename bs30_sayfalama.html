@@ -1,0 +1,43 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<!-- * sayfalarda yönlendirme yapmak için pagination componentini kullanırız. -->
+    <nav>
+        <ul class="pagination">
+            <li class="page-item disabled"><a class="page-link" href="">Geri</a></li>
+            <li class="page-item"><a class="page-link" href="">1   </a></li>
+            <li class="page-item"><a class="page-link" href="">2   </a></li>
+            <li class="page-item active"><a class="page-link" href="">3   </a></li>
+            <li class="page-item"><a class="page-link" href="">İleri</a></li>
+        </ul>
+    </nav>
+    <!-- todo pagination componenti böyle kullanılır, yukarıda li'ye ve a'ya verdiğimiz class'lar o etiketler "pagination" isimli bir kapsayıcıda olmadığı sürece anlamsızdır. Sayfada herhangi bir page-item class'ının yanına "active" yazarak kullanıcının şu an üzerinde bulunduğu sayfayı belirtmiş oluruz, disabled yazarak ise o sayfaya aktif olmadığını ve ulaşılamayacağını belirtiriz. -->
+
+    <nav>
+        <ul class="pagination pagination-lg">
+            <li class="page-item"><a href="" class="page-link">&laquo;</a></li>
+            <li class="page-item"><a href="" class="page-link">1</a></li>
+            <li class="page-item"><a href="" class="page-link">2</a></li>
+            <li class="page-item"><a href="" class="page-link">3</a></li>
+            <li class="page-item"><a href="" class="page-link">&raquo;</a></li>
+        </ul>
+    </nav>
+    <!-- todo pagination componentinin boyutunu küçültmek için "pagination-sm" , büyütmek için "pagination-lg" class'ını kullanırız. Ayrıca yukarıdaki örnekte ilk li etiketine yazdığımız  "&laquo; ifadesi bir html eitketi olup "önceki" işaretini oluştururken, son li etiketine yazdığımız "&raquo;" ifadesi ise yine bir html ifadesi olup "sonraki" işaretini oluşturur.  -->
+
+
+
+
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

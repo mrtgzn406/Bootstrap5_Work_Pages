@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class=" bg-success d-inline-flex d-xl-flex">d-xl-flex</div>
+    <div class=" bg-danger d-flex        d-xl-inline-flex ">d-xl-inline-flex</div>
+    <!-- bu örnekte etikete d-flex yazarak ona display: flex özelliğini vermiş oluyoruz, 
+    d-xl-inline-flex vererek ise sayfa genişliği xl (yani 1200px ve yukarısı) olunca display: flex özelliğini 
+    display: inline-flex'e çevir demiş oluyoruz. -->
+
+    <div class="d-flex bg-primary mt-4 p-2">
+        <div class="bg-info">d-flex-ic-div</div>
+        <div class="bg-warning">d-flex-ic-div</div>
+        <div class="bg-success">d-flex-ic-div</div>
+        <div class="bg-secondary">d-flex-ic-div</div>
+    </div>
+    <!-- bu örnekte kapsayıcıya d-flex verdiğimiz için kapsayıcı yatay olarak tüm ekranı kaplar,
+    içindeki nesneler ise kapsayıcının solundan sağına hizalanır -->
+
+    <div class="d-inline-flex bg-danger mt-4 p-2">
+        <div class="bg-info">d-inline-flex-ic-div</div>
+        <div class="bg-warning">d-inline-flex-ic-div</div>
+        <div class="bg-success">d-inline-flex-ic-div</div>
+        <div class="bg-secondary">d-inline-flex-ic-div</div>
+    </div>
+    <!-- bu örnekte kapsayıcıya d-inline-flex verdiğimiz için kapsayıcı yatay olarak içerik kadar yer kaplar,
+    içindeki nesneler ise kapsayıcının solundan sağına hizalanır -->
+
+    <div class="d-flex bg-warning mt-4 p-2 text-white">
+        <div class="bg-info">flex-row1</div>
+        <div class="bg-dark">flex-row2</div>
+        <div class="bg-success">flex-row3</div>
+    </div>
+    <!-- bir kapsayıcıya d-flex ya da d-inline-flex verdiğimiz zaman varsayılan olarak kapsayıcı içindeki nesneler
+    flex-row özelliğini almış gibi davranır ve nesneler soldan sağa hizalanır. Dolayısıyla flex özelliğine sahip kapsayıcıya flex-row verip vermemek bir şeyi değiştirmez. -->
+
+    <div class="d-flex bg-warning mt-4 p-2 flex-row-reverse text-white">
+        <div class="bg-info">flex-row-reverse1</div>
+        <div class="bg-dark">flex-row-reverse2</div>
+        <div class="bg-success">flex-row-reverse3</div>
+    </div>
+
+    <!-- Fakat eğer satırdaki nesneleri soldan sağa doğru değil, sağdan sola doğru hizalamak istersek flex-row-reverse yazarız ve nesneler tersten hizalanır -->
+
+    <div class="d-flex flex-lg-row-reverse bg-dark mt-4 p-2  text-white">
+        <div class="bg-info">flex-lg-row-reverse</div>
+        <div class="bg-secondary">flex-lg-row-reverse</div>
+        <div class="bg-success">flex-lg-row-reverse</div>
+    </div>
+    <!-- bu örnekte  kapsayıcının normalde d-flex class'ıyla varsayılan olarak flex-row almasını istedik ama flex-lg-row-reverse sınıfını yazarak sayfa genişliği lg (992px) ve yukarısı olduğunda kapsayıcı flex-row-reverse özelliğini uygulasın demiş olduk. -->
+
+
+    <div class="d-flex flex-column  flex-xl-column-reverse bg-dark mt-4 p-2  text-white">
+        <div class="bg-info">içerik1</div>
+        <div class="bg-secondary">içerik2</div>
+        <div class="bg-success">içerik3</div>
+    </div>
+    <!-- bu örnekte  kapsayıcının normalde flex-column almasını verdik ve onun nesneleri dikeyde sıralamasını sağladık ama flex-xl-column-reverse sınıfını yazarak sayfa genişliği lg (1200px) ve yukarısı olduğunda kapsayıcıya flex-column-reverse özelliğini uygula demiş olduk. Böylece dikeyde block olarak hizalanmış kapsayıcı içindeki nesneler kapsayıcıya yazılma sıralarına column-reverse özelliğini almış olan nesneler aşağıdan yukarıya doğru sırayla hizalanır -->
+
+
+
+    <!-- Önemli Not: class="row" özelliğini almış bütün etiketler d-flex özelliğini zaten alır. Bundan dolayı d-flex özelliğini almış etiketler flex özelliği ile ilgili tüm class'ları da alabilir. Örneğin justify-content-evenly,
+    align-items-center, align-content-center vb.-->
+
+
+
+
+
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

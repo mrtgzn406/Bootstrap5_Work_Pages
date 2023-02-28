@@ -1,0 +1,111 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+    <ol class="list-group list-group-numbered w-25 mt-5">
+        <li class="list-group-item position-relative d-flex">
+
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Back-end</div>
+                php, mysql, mssql, postgresql
+            </div>
+            <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">11</span>
+        </li>
+        <li class="list-group-item position-relative d-flex">
+
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Front-end</div>
+                javascript, scsss, css, bootstrap
+            </div>
+            <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">11</span>
+        </li>
+        <li class="list-group-item position-relative d-flex">
+
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Fullstack</div>
+                php, mysql, mssql, postgresql, javascript, scsss, css, bootstrap
+            </div>
+            <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">11</span>
+        </li>
+    </ol>
+    <!-- todo listede badge kullanımı böyledir -->
+
+    <!-- ! -------------------------------------------------------------------------------------------------------->
+    <div class="list-group w-25">
+        <a href="" class="list-group-item list-group-item-action active">
+            <h4>başlık</h4>
+            <p>içerik Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolores, repellat vel fugiat laudantium nesciunt.</p>
+        </a>
+        <a href="" class="list-group-item list-group-item-action disabled">
+            <h4>başlık</h4>
+            <p>içerik Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolores, repellat vel fugiat laudantium nesciunt.</p>
+        </a>
+        <a href="" class="list-group-item list-group-item-actio link-danger">
+        <h4>başlık</h4>
+        <p>içerik Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolores, repellat vel fugiat laudantium nesciunt.</p>
+        </a>
+     
+    </div>
+    <!-- todo bağlantı eitketleriyle panel düzeninde liste yapımı böyledir. -->
+    <!-- ! -------------------------------------------------------------------------------------------------------->
+
+    <div >
+        <div class="list-group">
+            <a href="#home" class="list-group-item list-group-item-action active" data-bs-toggle="list">anasayfa</a>
+            <a href="#projects" class="list-group-item list-group-item-action" data-bs-toggle="list" data-bs-toggle="list">projeler</a>
+            <a href="#us" class="list-group-item list-group-item-action" data-bs-toggle="list" data-bs-toggle="list">hakkımda</a>
+            <a href="#contact" class="list-group-item list-group-item-action" data-bs-toggle="list" data-bs-toggle="list">iletişim</a>
+        
+        
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane " id="home">bu panel anasayfa sayfasdıır Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis libero quaerat expedita autem, obcaecati laborum quisquam commodi itaque recusandae ipsam debitis adipisci nobis laboriosam! Nesciunt esse ad nostrum fugiat possimus?
+            Cumque dolorem aspernatur tempora rem tempore ipsam quasi ipsa id. Quam reiciendis quas aperiam voluptates. Molestiae minus quas corporis, reprehenderit quod ut inventore ab officiis ipsam iure, dicta facilis deleniti.</div>
+            <div class="tab-pane" id="projects">bu panel projeler sayfasdıır Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis libero quaerat expedita autem, obcaecati laborum quisquam commodi itaque recusandae ipsam debitis adipisci nobis laboriosam! Nesciunt esse ad nostrum fugiat possimus?
+            Cumque dolorem aspernatur tempora rem tempore ipsam quasi ipsa id. Quam reiciendis quas aperiam voluptates. Molestiae minus quas corporis, reprehenderit quod ut inventore ab officiis ipsam iure, dicta facilis deleniti.</div>
+            <div class="tab-pane" id="us">bu panel hakkımda sayfasdıır Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis libero quaerat expedita autem, obcaecati laborum quisquam commodi itaque recusandae ipsam debitis adipisci nobis laboriosam! Nesciunt esse ad nostrum fugiat possimus?
+            Cumque dolorem aspernatur tempora rem tempore ipsam quasi ipsa id. Quam reiciendis quas aperiam voluptates. Molestiae minus quas corporis, reprehenderit quod ut inventore ab officiis ipsam iure, dicta facilis deleniti.</div>
+            <div class="tab-pane" id="contact">bu panel ileitşim sayfasdıır Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis libero quaerat expedita autem, obcaecati laborum quisquam commodi itaque recusandae ipsam debitis adipisci nobis laboriosam! Nesciunt esse ad nostrum fugiat possimus?
+            Cumque dolorem aspernatur tempora rem tempore ipsam quasi ipsa id. Quam reiciendis quas aperiam voluptates. Molestiae minus quas corporis, reprehenderit quod ut inventore ab officiis ipsam iure, dicta facilis deleniti.</div>
+        </div>
+    </div>
+    <!-- todo bu kısımda ise düşey tab panel yapımı gösterilmiştir. -->
+
+    <div class="row mt-5">
+        <div class="col-2">
+            <div class="list-group">
+                <a href="#anasayfa" class="list-group-item list-group-item-action active" data-bs-toggle="list">anasayfa</a>
+                <a href="#projeler" class="list-group-item list-group-item-action" data-bs-toggle="list" >projeler</a>
+                <a href="#biz" class="list-group-item list-group-item-action" data-bs-toggle="list" >biz</a>
+                <a href="#iletişim" class="list-group-item list-group-item-action" data-bs-toggle="list">iletişim</a>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="tab-content">
+                <div class="tab-pane active" id="anasayfa"> anasayfa Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam facere totam, hic reiciendis suscipit vel, maiores optio quasi quod dolor eius deleniti distinctio. Enim qui voluptatem necessitatibus expedita numquam beatae!
+                Sint, fugiat. Error at consectetur sequi accusamus optio! Modi nisi neque earum explicabo? Adipisci nobis, commodi repellat alias natus at sed iure fugiat ipsam nihil nemo ea ullam ipsa dicta?</div>
+                <div class="tab-pane" id="projeler"> projeler Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam facere totam, hic reiciendis suscipit vel, maiores optio quasi quod dolor eius deleniti distinctio. Enim qui voluptatem necessitatibus expedita numquam beatae!
+                Sint, fugiat. Error at consectetur sequi accusamus optio! Modi nisi neque earum explicabo? Adipisci nobis, commodi repellat alias natus at sed iure fugiat ipsam nihil nemo ea ullam ipsa dicta?</div>
+                <div class="tab-pane" id="biz"> biz   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam facere totam, hic reiciendis suscipit vel, maiores optio quasi quod dolor eius deleniti distinctio. Enim qui voluptatem necessitatibus expedita numquam beatae!
+                Sint, fugiat. Error at consectetur sequi accusamus optio! Modi nisi neque earum explicabo? Adipisci nobis, commodi repellat alias natus at sed iure fugiat ipsam nihil nemo ea ullam ipsa dicta?</div>
+                <div class="tab-pane" id="iletişim">iletişim Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam facere totam, hic reiciendis suscipit vel, maiores optio quasi quod dolor eius deleniti distinctio. Enim qui voluptatem necessitatibus expedita numquam beatae!
+                Sint, fugiat. Error at consectetur sequi accusamus optio! Modi nisi neque earum explicabo? Adipisci nobis, commodi repellat alias natus at sed iure fugiat ipsam nihil nemo ea ullam ipsa dicta?</div>
+            </div>
+        </div>
+    </div>
+    <!-- !------------------------------- -->
+
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

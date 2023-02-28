@@ -1,0 +1,145 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="accordion" id="kapsayici">
+            <!-- todo accordion bileşenini oluşturmak için en dış kapsayıcı olarak bir div oluşturup ona "accordion" class'ını deriz -->
+            <div class="accordion-item">
+                <!-- todo accordion'da açılacak her bir bölüm için başka bir "accordion-item" kısmı oluşturulur -->
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-target="#accordion_1" data-bs-toggle="collapse">Zeytin
+                        Faydaları</button>
+                </h2>
+                <!-- todo daha sonra accordion-item div'inin içine "accordion-header" class'ını vereceğimiz bir başlık etiketi veya div yazarız. -->
+                <!-- * O accordion-header divinin içine de bir buton oluştururuz ve class olarak "accordion-button" class'ını veririz böylece o buton boydan boya uzanan ve biçimlendirilmiş, şık bir buton olur. Tıkladığımız butonun kapatma açma işlevini belirtmek için data-bs-toggle="collapse" özelliğini kullanırız. Butonun nereyi açıp kapayacağını belirtmek için ise data-bs-target="" özelliğini kullanır ve açıp-kapamak istediğimiz accordion-collapse  div'inin id'sini yazarız.-->
+
+                <div class="collapse accordion-collapse" data-bs-parent="#kapsayici" id="accordion_1">
+                    <!-- todo accordion-item'da açma kapama butonunu oluşturmak için accordion-header div2ini kullandıktan sonra accordion-item içindeki açıp kapanacak bölümü oluşturmak için accordion-item'ın kardeşi bir div yaratıp ona "accordion-collapse" class'ını veriyoruz, bir kimlik tanımlamak için id özelliğini kullanıyoruz böylece butonun data-bs-target="" özelliğine bu kimlik adını yazabiliyoruz. Collapse class'ı ise bu accordion komple ilk açıldığında accordion-collapse div'inin içeriği açık olarak mı gelsin kapalı olarak mı onu belirtir. Eğer collapse class'ı verilirse bu kısım kapalı gelir ama eğer bu sınıf yazılmazsa açık olarak gelir. show   -->
+                    <!-- ! accordion'da bir butona basıldığında basılan butonun kendisiyle ilişkilendirilmiş "accordion-collapse" kısmının açılıp, accordion içindeki diğer kısımların o açıldıktan sonra otomatik kapanması işlemi için ise   accordion-collapse div'ine 
+                        data-bs-parent="" özelliğini verilir ve bu özelliğe değer olarak kapsayıcı accordion'a verilen id yazılır, bu bütün accordion-collapse div'lerine uygulanmalıdır  -->
+                    <p class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ullam
+                        <!-- todo burası ise accordion-item div'inin içeriği oluşturduğumuz accordion-body div'idir. Buraya accordion body yazarak bu kısmın bazı biçimlendirmeler, margin'ler almasını ve içeriğin daha güzel görünmesini sağlıyoruz -->
+                        rerum non neque itaque
+                        porro vero mollitia? Minus molestiae totam nihil temporibus, natus cum suscipit ea odit aliquam
+                        facere?
+                        Iusto suscipit assumenda ab a reprehenderit ipsum voluptate enim quas numquam accusantium. Autem
+                        sapiente iure doloribus, fugiat, beatae repellendus at adipisci quia nostrum, laboriosam
+                        necessitatibus. Aperiam sit officia veniam sint.
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-target="#accordion_2" data-bs-toggle="collapse">Zeytin
+                        Zararları</button>
+                </h2>
+                <div class="accordion-collapse collapse" data-bs-parent="#kapsayici" id="accordion_2">
+                    <p class="accordion-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+                        sapiente
+                        voluptatibus dolorum in praesentium animi velit laboriosam quaerat temporibus repellendus, ipsum
+                        excepturi necessitatibus soluta architecto iste illum esse quidem facere?
+                        Quod, corrupti aut. Laudantium, praesentium eveniet enim voluptas cumque quod deleniti aliquam
+                        fuga
+                        culpa explicabo mollitia eius laborum eos eaque harum quo est nulla consequuntur magnam veniam,
+                        distinctio nam at?</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-target="#accordion_3" data-bs-toggle="collapse">Zeytin
+                        Amacı</button>
+                </h2>
+                <div class="collapse accordion-collapse" id="accordion_3" data-bs-parent="#kapsayici">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,
+                        necessitatibus velit. Quas fugiat, rem rerum iste facere et sint quae accusamus ab odio ullam
+                        itaque
+                        optio ducimus similique ad molestiae.
+                        Dolore harum, non porro pariatur eos modi obcaecati, accusamus soluta, dolor dolores tempora
+                        itaque
+                        doloremque ratione. Quidem, autem blanditiis illo itaque officiis vitae atque fugiat suscipit
+                        neque
+                        velit omnis ut.</div>
+                </div>
+            </div>
+        </div>
+        <!-- ! --------------------------------------------------------------------------------------------->
+        <div class="accordion mt-5 accordion-flush " id="murat">
+            <!-- todo accordion bileşeninin kenarlıklarını ve köşe yuvarlatmasını kaldırmak için accordion-flush class'ı kullandık. -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-target="#eko_1" data-bs-toggle="collapse">Aksiyon
+                        Oyunları</button>
+                </div>
+                <div class="accordion-collapse collapse" data-bs-parent="#murat" id="eko_1">
+                    <div class="accordion-body">Aksiyon oyunu, el göz koordinasyonu ve tepki süresi gibi fiziksel
+                        zorlukları
+                        önplana çıkaran bir video oyun türüdür. Türün en bilinen alt türleri dövüş, nişan ve platform
+                        oyunlarıdır. Aynı zamanda çeşitli çevrelerde gerçek zamanlı strateji oyunları da aksiyon türüne
+                        dahil edilir.</div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-target="#eko_2" data-bs-toggle="collapse">Rol Yapma
+                        Oyunu</button>
+                </div>
+                <div class="accordion-collapse collapse" data-bs-parent="#murat" id="eko_2">
+                    <div class="accordion-body">Rol yapma oyunu, oyuncuların kurgusal bir sahnede farklı karakterlerin
+                        rollerini üstlendikleri oyunların genel bir ailesidir. Oyuncular, belirli kurallar çerçevesinde
+                        oluşturulan karakterleri yöneterek bir hikâyenin parçası olurlar.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-target="#eko_3" data-bs-toggle="collapse">Strateji
+                        Oyunu</button>
+                </div>
+                <div class="accordion-collapse collapse" data-bs-parent="#murat" id="eko_3">
+                    <div class="accordion-body">Strateji oyunu veya stratejik oyun oyuncuların kendilerine özel
+                        taktiklerinin büyük önem taşıdığı, karar verme becerisi gerektiren oyundur. Bütün strateji
+                        oyunları
+                        farklı şekillerde düşündürmeyi ve tipik olarak durumsal farkındalık gerektirir. Satranç dünyada
+                        en
+                        çok bilinen strateji oyunudur.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="accordion-button" data-bs-target="#eko_4" data-bs-toggle="collapse">Simülasyon
+                        Oyunu</button>
+                </div>
+                <div class="accordion-collapse collapse" data-bs-parent="#murat" id="eko_4">
+                    <div class="accordion-body">Simülasyon oyunu, genellikle gerçek dünyadaki etkinlikleri yakından
+                        simüle
+                        etmek için tasarlanmış video oyunlarıdır. Simülasyon oyunları eğitim, analiz veya tahmin gibi
+                        çeşitli amaçlar için bir oyun biçiminde çeşitli etkinlikleri gerçek hayattan kopyalamaya
+                        çalışır.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

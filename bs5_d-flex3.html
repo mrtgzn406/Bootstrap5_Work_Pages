@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+        }
+    </style>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="d-flex bg-secondary text-white my-2 p-3">
+        <div class="flex-fill bg-success p-2">flex-fill</div>
+        <div class="flex-lg-fill  bg-danger p-2">flex-lg-fill</div>
+        <div class="bg-warning p-2">flex-xl-fill</div>
+    </div>
+    <!-- flex-fill class'ı, d-flex kapsayıcısına sahip etiketlere verilebilir. Normalde kapsayıcı içindeki etiketler içeriği kadar yer kaplarken flex-fill özelliğini verdiğimiz etiket yatay olarak kapsayıcıda boş kalmış bütün yerleri doldurur, yani aslında etikete width: 100% vermiş oluruz. flex-lg-fill, flex-xxl-fill class'ları ise bu flex-fill özeliğinin hangi sayfa genişliğinden sonra çalışacağını belirler.-->
+
+    <div class="d-flex bg-secondary p-3 my-2">
+        <div class="flex-grow-0 bg-warning">flex-grow-0</div> 
+        <!-- bu ata etikete d-flex verildiğinde varsayılan olarak gelen class'tır, bir şey yazılmasa da bu özellik yine çalışırdı. -->
+        <div class="flex-grow-1 bg-danger">flex-grow</div> 
+        <!-- bu da kapsayıcıda width: 100; özelliğini veren class'tır. -->
+        <div class="flex-lg-grow-1 bg-info">flex-grow</div>
+        <!-- bu da sayfa genişliği lg(992px) olduğunda aktifleşir -->
+    </div>
+<!--  -->
+
+<div class="d-flex bg-secondary p-3 my-2">
+    <div class=" bg-warning flex-shrink-1">flex-shrink-1</div> 
+    <!-- flex-shrink-1 bu etiketin kapsayıcısına d-flex verildiğinde varsayılan olarak gelen class'tır, bir şey yazılmasa da bu özellik yine çalışırdı. Bu özellik sayfa genişliği yetersiz geldiğinde etiketin içeriğini görüntülenmesi için daralt demektir. 
+    
+    flex-shrink-1 içerik daraltılsın,
+    flex-shrink-0 içerik daraltılmasın demektir-->
+
+    <div class=" bg-danger flex-md-shrink-0">flex-md-shrink-0</div> 
+    <!-- bu örnek ise sayfa genişliği 768px olduğunda içerik daraltılmasın demektir. -->
+    <div class="flex-shrink-0 bg-info">flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 flex-shrink-0 </div>
+    <!-- bu da sayfa genişliği ne olursa olsun içeriği daraltma demektir -->
+</div>
+
+
+<!-- Not: Bootstrap 3 ve 4 versiyonlarında margin-right, padding-right gibi özellikleri vermek için ifade olarak mr-2, pr-2 gibi class'ları; margin-left ve padding-left vb. özellikleri vermek içinse ml-2, pl-2 gibi class'ları kullanırdıık, yani  o class'lardaki "r" harfi right, "l" harfi left anlamına gelirdi. 
+
+Fakat Bootstrap 5 ile birlikte şimdi o right anlamına gelen "r" harfinin yerini "e" aldı,
+                                     o left anlamına gelen  "l" harfinin yerini ise "s" aldı.
+
+Fakat top ve bottom için kullanılan "t" ve "b" harfleri değişmedi.
+
+
+-->
+
+<div class="d-flex bg-secondary text-white my-2 p-3 justify-content-end">
+    <div class="mt-4 bg-success p-2">me-auto</div> <!-- margin-top verdik -->
+    <div class="ms-5 bg-danger p-2">normal</div> <!-- margin-left verdik -->
+    <div class="me-5 bg-warning p-2">normal</div> <!--  margin-right verdik -->
+</div>
+
+
+
+<div class="d-flex bg-secondary text-white my-2 p-3">
+    <div class="ms-auto bg-success p-2">me-auto</div>
+    <div class="bg-danger p-2">normal</div>
+    <div class="bg-warning p-2">normal</div>
+</div>
+<!-- burada birinci iç etikete margin-left: auto; özelliğini vermek için ms-auto yazdık ve bu yüzden etiket kendisiyle birlikte sağında bulunan diğer tüm etiketleri de sürükleyerek sağa yanaştı. -->
+
+<div class="d-flex bg-secondary text-white my-2 p-3">
+    <div class="bg-success p-2">normal</div>
+    <div class="bg-danger p-2">normal</div>
+    <div class="ms-auto bg-warning p-2">ms-auto</div>
+</div>
+<!-- burada sonuncu iç etikete margin-left: auto; özelliğini vermek için ms-auto yazdık ve bu yüzden etiket en sağa yanaştı, sol taraftan olabildiğince uzaklaşmaya çalıştı.-->
+
+<div class="d-inline-flex bg-secondary text-white my-2 p-3 w-75">
+    <div class="bg-success p-2">normal</div>
+    <div class="bg-danger p-2">normal</div>
+    <div class="mx-auto bg-warning p-2">mx-auto</div> <!-- margin: auto;özelliğini verir, onu yatayda ortalar -->
+</div>
+
+
+<div class="d-flex bg-secondary text-white my-2 p-3">
+    <div class="bg-success p-2 order-3">flex-içerik1</div>
+    <div class="bg-danger  p-2 order-1">flex-içerik2</div>
+    <div class="bg-warning p-2 order-5" >flex-içerik3</div>
+    <div class="bg-primary p-2 order-1" >flex-içerik4</div>
+    <div class="bg-dark    p-2 order-4" >flex-içerik5</div>
+</div>
+<!-- order class2ı ise flex kapsayıcıya sahip etiketleri sıralmaya yarar, etiket en sonuncu olarak yazılmış olsa bile order-1 diyerek onu başta gösterebiliriz. Ya da ortada 3. sırada yazılmış olsa onu en başa getirebiliriz. -->
+
+
+<div class="d-flex bg-secondary text-white my-2 p-3 flex-wrap">
+    <div class="bg-success p-2">normal1</div>
+    <div class="bg-danger px-3">normal2</div>
+    <div class="bg-warning px-3">normal3</div>
+    <div class="bg-primary px-3">normal4</div>
+    <div class="bg-danger px-3">normal5</div>
+    <div class="bg-dark px-3">normal6</div>
+    <div class="bg-info px-3">normal7</div>
+    <div class="bg-success px-3">normal8</div>
+    <div class="bg-secondary px-3">normal9</div>
+    <div class="bg-danger px-3">normal10</div>
+    <div class="bg-info px-3">normal11</div>
+    <div class="bg-warning px-3">normal12</div>
+</div>
+<!-- flex-wrap class'ı ise yine flex özelliğine sahip kapsayıcıya verilir ve nesnelerin sayfa genişliği yetersiz kaldığında aşağı satıra kaydırılmasını sağlar.
+
+flex-wrap-reverse nesnelerin sondan başa doğru kaydırılmasını sağlar,
+
+flex-nowrap ise nesnelerin kaydırılmamasını söyler
+
+-->
+
+
+
+
+
+
+
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

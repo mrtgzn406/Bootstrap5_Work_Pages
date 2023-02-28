@@ -1,0 +1,48 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="progress mb-5">
+        <div class="progress-bar" style="width: 18%;">%18</div>
+    </div>
+    <!-- todo progressbar yapımı işte böyledir bir kapsayıcı div bir de iç div gereklidir, blok etikete ihtiyacımız vardır. bu sayede kapsayıcıya progress class'ını verip soluk arka plan rengiyle progress bar'ın (ilerleme çubuğunun ) ilerleyebileceği alanı göstermiş oluruz. iç div ise o progressbar'ın ne kadar ilerlediğini renkli bir çubuk olarak gösterir. Normalde o progressbar'ın ne kadar ilerlediği javascript vb programlama dili komutlarıyla yapılmalıdır, biz görünsün width: 78% gibi ifadeler yazdık. -->
+    <!-- ?  progress-bar class'ını verdiğimiz etiket arasına yazdığımız metinler otomatik ortalanır -->
+
+    <div class="progress mb-5">
+        <div class="progress-bar bg-danger" style="width: 57%;">%57</div>
+    </div>
+    <!-- todo progressbar'ın rengini böyle bg-danger gibi arka fon renk class'ları ile değiştirebiliriz -->
+
+
+    <div class="progress mb-5">
+        <div class="progress-bar bg-info progress-bar-striped" style="width: 78%;">%78</div>
+    </div>
+    <!-- todo progressbar'ı böyle çizgili hale getirmek için progress-bar-striped class'ı kullanılır -->
+    
+    <div class="progress mb-5">
+    <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" style="width: 94%;">%94</div>
+    </div>
+    <!-- todo progressbar'ı animasyonlu hale getirmek için progress-bar-animated yazarız -->
+<!-- ! ---------------------------------------------------------------------------------------------------->
+    <!-- * diyelim ki biz progressbar kullanarak diskteki doluluk oranını göstermek istiyoruz, o zaman bir "progress" class'ını almış kapsayıcının arasına birkaç tane "progress-bar" class'ı verdiğimiz div ekleriz -->
+    <div class="progress">
+        <div class="progress-bar bg-success progress-bar-animated" style="width: 27%;">belgeler</div>
+        <div class="progress-bar bg-danger progress-bar-animated" style="width: 43%;">oyunlar</div>
+        <div class="progress-bar bg-info progress-bar-animated" style="width: 20%;">resimler</div>
+        <div class="progress-bar bg-secondary progress-bar-animated" style="width: 10%;">boş alan</div>
+    </div>
+</div>
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

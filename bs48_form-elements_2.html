@@ -1,0 +1,125 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <form action="">
+        <div class="container">
+            <div class="row row-cols-1">
+                <div class="col">
+                    <label for="" class="form-label">isim soyisim:</label>
+                    <input type="text" class="form-control-plaintext ">
+                    <!-- todo burada "form-control-plaintext" yazarak , form nesnesinin d-block olmasını ve kenarlarında bir gölge olmamasını sağladık -->
+                </div>
+                <div class="col">
+                    <select class="form-select form-select-lg" multiple size="2">
+                        <!-- todo "form-select" yazarak ise select ve option etiketleriyle yapılan bir combo box'a biraz daha şekil verdik. form-select-x(-sm, -lg) diyerek ise bu select etiketinin boyutunu büyütürüz veya küçültürüz-->
+                        <!-- * burada multiple özelliğiyle bu nesnede kullanıcının çoklu seçim yapılabilmesini, size="2" diyerek ise seçim ekranında 2 seçeneğin görüntülenmesini sağlarız -->
+
+                        <option value="" selected>ataşehir</option>
+                        <!-- *selected özelliği ile bu seçeneğin işaretli olmasını sağlarız -->
+
+                        <option value="">beylikdüzü</option>
+                        <option value="">esenler</option>
+                        <option value="">ümraniye</option>
+                        <option value="">beykoz</option>
+                        <option value="">kadıköy</option>
+                        <option value="">sarıyer</option>
+                        <option value="">beşiktaş</option>
+                    </select>
+
+                    <!-- *checkbox kısmı -->
+                    <div class="col">
+                        <div class="form-label">hangi hayvan(lar)ı besliyorsunuz</div>
+
+                        <div class="form-check">
+                            <!-- todo burada checkbox veya radio buton oluşturmak için gerekli olan kapsayıcıyı oluşturduk ve class'ına "form-check" dedik. -->
+
+                            <input type="checkbox" class="form-check-input">
+                            <!-- todo burada ise kapsayıcı içine yazılacak en mühim etiket olan input etiketini oluşturduk, type ="" özelliğini verdik ve güzel bir biçimlendirme alması için "form-check-input" class'ını verdik. -->
+
+                            <label for="" class="form-check-label">kedi</label>
+                            <!-- todo burada ise kapsayıcının 2. en önemli etiketi olan label etiketini kullandık, biçimlendirme alması için "form-label" class'ını verdik-->
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="" class="form-check-label">köpek</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <!-- todo eğer oluşturacağımız form-check bileşeninin block etiket değil inline olmasını istiyorsak ona "form-check-inline" class'ını veririz -->
+                            <input type="checkbox" class="form-check-input" checked>
+                            <label for="" class="form-check-label">kuş</label>
+                        </div>
+                        <div class="form-check-inline disabled  ">
+                            <input type="checkbox" class="form-check-input" disabled checked>
+                            <!-- todo bu kısımda ise hem "checked" özelliği ile seçilmiiş hem de "disabled" özelliği ile deaktif edilmiş bir input nesnesi var. -->
+                            <label for="" class="form-check-label">hamster</label>
+                        </div>
+                    </div>
+
+                    <!-- * switch yapımı -->
+                    <div class="col">
+                        <div class="form-check form-switch">
+                            <!-- todo eğer checkbox olan input nesnelerini anahtar şekline çevirmek istiyorsak kapsayıcı etikete "form-switch" yazarız -->
+                            <input type="checkbox" class="form-check-input ">
+                            <label for="" class="form-label">Siteyi Koyu Yap</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="" class="form-label">oyunda info bilgisini kaldır</label>
+                        </div>
+                    </div>
+
+
+
+                    <!-- * radio button kısmı -->
+
+                    <div class="col">
+                        <div class="form-label">Hangi türde ehliyet sahibisiniz ?</div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="muro">
+                            <label for="">A Ehliyeti</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="muro">
+                            <label for="" class="form-check-label">B Ehliyeti</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="muro">
+                            <label for="" class="form-check-label">D Ehliyeti</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="muro">
+                            <label for="" class="form-check-label">E Ehliyeti</label>
+                        </div>
+                        <!-- ! burada radio özelliği alan her input nesnesine name="muro" yazılması sadece birisinin seçilebilmesi, biri seçildiğinde daha öncedeb seçilmiş olanın işaretinin kalkması  içindir -->
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

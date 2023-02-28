@@ -1,0 +1,126 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="">
+        <div class="container">
+
+            <div class="row row-cols-1 gy-2">
+                <div class="col">
+                    <label for="" class="form-label">aralık seçin</label>
+                    <input type="range" class="form-range" min="0" max="200" step="10">
+                    <!-- todo form nesnelerinde bir aralık nesnesi oluşturmak için input etiketini oluşturup özelliğine de type="range" verildikten sonra class olarak "form-range" veririz böylece güzel bir biçimlendirme alır  -->
+                </div>
+
+                <div class="col">
+                    <div class="input-group row">
+                        <input type="text" class="form-control" placeholder="e postanızı giriniz">
+                        <span class="input-group-text">@hotmail.com</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group">
+                        <span class="input-group-text">+90 5</span>
+                        <input type="tel" class="form-control" maxlength="9" minlength="9">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="input-group">
+                        <span class="input-group-text">görüşleriniz:</span>
+                        <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="" class="form-label d-inline-block">E-posta</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="input-group">
+                        <span class="input-group-text">input group normal size</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group-lg">
+                        <span class="input-group-text">input group large size</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group-sm">
+                        <span class="input-group-text">input group small size</span>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <!-- ! **********************************************************************************************************-->
+                <!-- * burada checkbox ve radio buton grupları, input-group bileşeniyle birlikte yapılmıştır -->
+
+                <div class="col">
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <input type="checkbox" class="form-check-input">
+                        </div>
+                        <input type="text" class="form-control"
+                            placeholder="aldığınız burslar var ise yazınız, kutucuğunu işaretleyip yazınız">
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="input-group">
+                        <div class="input-group-text">
+
+                            <input type="radio" name="murat">
+                        </div>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!-- ! ****************************************************************************************-->
+    <!-- * kayan etiketli inputlar oluşturma  -->
+    <form action="" class="mt-5">
+        <div class="container">
+            <div class="row row-cols-1">
+                <div class="form-floating">
+                    <!-- todo kayan etiketli input oluşturmak için sadece input ve onunla ilgili diğer etiketleri (mesela o input için yaptığın label etiketi, div etiketi vb.) kapsayan bir kapsayıcı div oluşturulur ve class'ına "form-floating"  verilir  -->
+                    <!-- !  kayan etiket özelliğinin çalışması için input label'dan önce yazılmalıdır ve input nesnesine özellik olarak "placeholder" yazılmalı ve ona bir değer de verilmelidir aksi takdirde kayan etiket düzgün çalışmaz-->
+                    <input type="text" class="form-control" placeholder="adınız">
+                    <label for="" class="form-label">adınız soyadınız</label>
+                </div>
+                <div class="form-floating">
+                    <input type="email" class="form-control" placeholder="e postanız">
+                    <label for="" class="form-label">e postanız</label>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

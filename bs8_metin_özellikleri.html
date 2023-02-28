@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+<h4 class="display-4 display-4-sm">Lead Sınıfı</h4>
+
+<p>Normal Metin</p>
+<p class="lead">lead class'lı metin</p>
+<!-- bu class'ı verdiğimizde font-size 1.25rem ve font-weight: 300 oldu  -->
+
+<h4 class="display-4">Metinleri Hizalama</h4>
+
+<p class="text-center"><kbd>text-center </kbd> sınıfı metinleri ortaya hizalamaya yarar</p>
+<p class="text-end"><kbd>text-end</kbd> sınıfı metinleri sağa hizalamaya yarar</p>
+<p class="text-start"><kbd>text-start</kbd> sınıfı metinleri sola hizalamaya yarar, zaten varsayılan olarak metinler sola hizalanır</p>
+
+<p class="text-right text-lg-left text-xl-center">bu ise responsive bir metindir</p>
+
+
+
+<!-- ! ayırıcı   ------------------------------------------------------------------------------------------------>
+
+
+
+<h4 class="display-4">Metni aşağı satıra kırma özelliği</h4>
+
+<p class="text-wrap">Varsayılan olarak gerek html de gerekse de bootstrap5'te metin zaten aşağı doğru kırılır. Yine de class olarak metni aşağı kırma sınıfı text-wrap ' tır.</p>
+
+<p class="text-nowrap">Metni aşağı kırmamanın sınıfı ise text-nowrap'tır. Böylece ekran genişliği küçüldüğünde ve artık metin erkana sığmadığında bile aynı satırda kalmaya devam eder, metin alt satıra kırılmaz. </p>
+
+<!-- ! ayırıcı   ------------------------------------------------------------------------------------------------>
+
+<h4 class="display-4">Kelimeyi aşağı satıra kırma özelliği</h4>
+<p  class="text-break">ıogıogneııııııııııııııııııııııwegwwwwwwwwwwkpokvopkeopkpoefgwkeopfoefmkoekfoekfokefkeofkeofkoekfoekfokefkeofkoekfoekfoekfoekfoekfkeofkeofkefkefk</p>
+<!-- ! text-break almış hali -->
+<p >ıogıogneııııııııııııııııııııııwegwwwwwwwwwwkpokvopkeopkpoefgwkeopfoefmkoekfoekfokefkeofkeofkoekfoekfokefkeofkoekfoekfoekfoekfoekfkeofkeofkefkefk</p>
+<!-- ! text-break almamış hali -->
+
+
+
+<!-- todo  varsayılan olarak her türlü metine html'den gelen bir text-wrap özelliği olsa da text-break özelliği yoktur. text-break özelliği çok uzun bir kelimenin sitenin boyutunu bozmasını engeller ve o kelimeyi aşağı doğru kırar.    -->
+<!-- ! ayırıcı   ------------------------------------------------------------------------------------------------>
+<h4 class="display-4">text-decoration özelliği</h4>
+
+<p class="text-decoration-underline">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, omnis.</p>
+<p class="text-decoration-line-through">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, omnis.</p>
+<div class="container">
+    <a href="">normal</a>
+    <a class="text-decoration-none" href="">text-decoration-none</a>
+</div>
+
+<!-- ! ayırıcı   ------------------------------------------------------------------------------------------------>
+
+<h4 class="display-4">Büyük, Küçük harf özelliği</h4>
+<p class="text-uppercase">text-uppercase Her türlü harfi büyük harfe çevirir</p>
+<p class="text-lowercase">text-lowercase Her türlü harfi küçük harfe çevirir</p>
+<p class="text-capitalize">text-capitalize Her türlü kelimenin ilk harfini büyük yapar</p>
+
+<!-- ! ayırıcı   ------------------------------------------------------------------------------------------------>
+<h4 class="display-4">Metin boyutu, tipi, kalınlığı</h4>
+
+<p class="fs-1">font-size 1</p>
+<p class="fs-2">font-size 2</p>
+<p class="fs-3">font-size 3</p>
+<p class="fs-4">font-size 4</p>
+<p class="fs-5">font-size 5</p>
+<p class="fs-6">font-size 6</p>
+
+<!-- todo Bootstrap5'te etiketin sınıfına fs-x yazarak 1-6 arasında bir font-size büyüklüğü verebiliriz, 1 en büyük, 6 en küçük font-size boyutunu temsil eder -->
+
+<p class="fs-3 fw-bold">font-weight bold</p>
+<p class="fs-3 fw-bolder">font-weight bolder </p>
+<p class="fs-3 fw-semibold">font-weight semibold</p>
+<p class="fs-3 fw-light">font-weight light</p>
+<p class="fs-3 fw-lighter">font-weight lighter</p>
+
+<!-- ? Bootstrap5'te etiketin sınıfına fs-x yazarak ise yazının font-weight özelliğini ayarlarız -->
+
+
+<p class="fs-3 fst-italic">font-weight </p>
+<p class="fs-3 fst-normal">font-weight </p>
+
+<!-- * Bootstrap5'te etiketin sınıfına fst-x yazarak ise yazının font-style özelliğini ayarlarız, varsayılan olarak yazı italic değil normal görünür -->
+
+<!-- ! ayırıcı   ------------------------------------------------------------------------------------------------>
+
+<p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<!-- todo line-heigth özelliği vermek için yukarıdaki classlar kullılır, satır aralığı miktarı üstten aşağı doğru verilen class'larla artmaktadır.  -->
+
+<!-- ! ayırıcı   ------------------------------------------------------------------------------------------------>
+
+<p class="font-monospace">Burada ise font-monospace sınıfını kullanarak yazı tipini değiştiririz</p>
+
+<!-- ! ayırıcı   ------------------------------------------------------------------------------------------------>
+
+<p class="text-danger">
+    Muted text with a <a href="#">normal metin</a>.
+  </p>
+<p class="text-danger">
+    Muted text with a <a href="#" class="text-reset">text-reset</a>.
+  </p>
+  <!-- todo bu text-reset class'ı  ile normalde ebeveyn etiketin metin rengini almayan çocuk etiketlerin o rengi  almasını sağlıyoruz -->
+
+  
+  <ul>
+    <li>list-unstyled almamış hali</li>
+    <li>list-unstyled almamış hali</li>
+    <li>list-unstyled almamış hali</li>
+    <li>list-unstyled almamış hali</li>
+  </ul>
+  <ul class="list-unstyled">
+    <li>list-unstyled almış hali</li>
+    <li>list-unstyled almış hali</li>
+    <li>list-unstyled almış hali</li>
+    <li>list-unstyled almış hali</li>
+  </ul>
+<!-- todo bu class ise liste elemanlarının solunda bulunan madde işaretlerini alır, yani list-style: none; özelliğini almış olur -->
+
+<ul>
+    <li>normal</li>
+    <li>normal</li>
+    <li>normal</li>
+    <li>normal</li>
+</ul>
+
+<ul class="list-inline">
+    <li class="list-inline-item "><a href="">anasayfa</a></li>
+    <li class="list-inline-item "><a href="">hakkımızda</a></li>
+    <li class="list-inline-item "><a href="">projelerimiz</a></li>
+    <li class="list-inline-item "><a href="">iletişim</a></li>
+</ul>
+<!-- todo list-inline sınıfı ul etiketine verildiğinde soldaki madde işaretlerini alır, o ul etiketinin içindeki li etiketine list-inline-item sınıfı verildiğinde ise liste elemanları float left almış gibi soldan sağa  doğru hizalanır-->
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container bg-secondary p-3 ">
+        <span class="float-start bg-danger p-1 ">float-start</span>
+        <span class="float-end bg-success p-1 ">float-end</span>
+        <span class="float-none bg-info p-1 ">float-none</span>
+    </div>
+    
+    <!-- * float: left vermek için float-start, float:right vermek içinse float-end sınıfı kullanılır ve bu sınıflar kullanıldıktan sonra yukarıdaki örnekte görüldüğü gibi kendinden sonra gelen nesnelerin de konumunu değiştirir. Bu çoğu zaman can sıkıcı bir durumdur. -->
+    
+    <!-- !float sınıfını yani özelliğini onu iyice bilmeden kullanmamalıyız çünkü biraz tehlikeli bir komuttur.  Kendisinden sonra gelen etiketleri de etkiler. Ondan dolayı bu olumsuzluğu düzeltmek için clearfix özelliğini kullanmalyızı, bunun bootstrap5'teki karşılığı clearfix sınıfıdır. Bu yukarıdaki örnek verdiğimiz clearfix class'ı float özelliğini almış etiketlerin bunu kendinden sonra gelen etiketlere de yansıtmaması için kullanılır ve boş bir nesne tanımlayıp o devam eden float özelliğini yok eden bazı özelliklere sahiptir. O özelliklerin ne olduğu öğrenmek için internette clearfix nedir diye araştır. -->
+
+    <div class="container bg-secondary p-3 ">
+        <span class="float-start bg-danger ">float-start</span>
+        <span class="float-end bg-success ">float-end</span>
+        <span class="clearfix"></span> <!-- ! clearfix 1. kullanım -->
+        <span class="float-none bg-info ">float-none</span>
+        <!-- ! float'tan sonra gelen etiketin float-none class'ı almış olması da clearfix özelliği sağlamaz. -->
+    </div>
+    <!-- *  clearfix class'ının iki farklı kullanımı vardır birincisi yukarıdaki kullanımdır. Clearfix verilmek istenen yere boş bir etiket yazılır, içi boş bırakılır, genişlik yükseklik verilmez ve class olarak clearfix verilir. Böyklelikle önceki etiketlerden gelen float özelliğini yok eder.-->
+    
+    <div class="container bg-secondary p-3 ">
+        <div class="clearfix"> <!-- ! clearfix 2. kullanım -->
+            <span class="float-start bg-danger ">float-start</span>
+            <span class="float-end bg-success ">float-end</span>
+        </div>
+        <span class="float-none bg-info ">float-none</span>
+    </div>
+    <!-- *  ikinci kullanımı ise yukarıdaki kullanımdır. Hangi etiketlerden sonra float özelliği bitirilmek isteniyorsa  o etiketler bir kapsayıcı etiket içine alınır, o kapsayıcı etikete genişlik yükseklik verilmez ve class olarak clearfix verilir. Böylelikle o kapsayıcı içerisindeki etiketlerin float özelliği kapsayıcıdan çıkıldıktan sonra yok edilir, dışarı yansımaz.-->
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

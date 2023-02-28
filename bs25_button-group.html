@@ -1,0 +1,74 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="d-flex flex-column align-items-center justify-content-around" style="height: 500px;"> 
+
+
+    <div class="btn-group" role="group">
+        <button class="btn btn-success" >button</button>
+        <button class="btn btn-success">button</button>
+        <button class="btn btn-success">button</button>
+    </div>
+    <!-- todo normal button group böyle yatay şekilde oluşturulur. -->
+
+    <div class="btn-group-vertical">
+        <button class="btn btn-dark">dikey buton</button>
+        <button class="btn btn-dark">dikey buton</button>
+        <button class="btn btn-dark">dikey buton</button>
+    </div>
+    <!-- todo buton grubunu dikey olarak hizalamak içinse btn-group-vertical class'ı kullanılır -->
+
+    <div class="btn-group" role="group">
+        <input type="checkbox" class="btn-check" id="kontrol1">
+        <label for="kontrol1" class="btn btn-outline-primary">Checkbox 1</label>
+        <input type="checkbox" class="btn-check" id="kontrol2">
+        <label for="kontrol2" class="btn btn-outline-primary">Checkbox 2</label>
+        <input type="checkbox" class="btn-check" id="kontrol3">
+        <label for="kontrol3" class="btn btn-outline-primary">Checkbox 3</label>
+    </div>
+    <!-- todo burada ise checkbox buton grubu yaptık  -->
+    <div class="btn-group" role="group">
+        <input type="radio" class="btn-check" name="radio" id="radio1">
+        <label for="radio1" class="btn btn-outline-danger">radio 1</label>
+        <input type="radio" class="btn-check" name="radio" id="radio2">
+        <label for="radio2" class="btn btn-outline-danger">radio 2</label>
+        <input type="radio" class="btn-check" name="radio" id="radio3">
+        <label for="radio3" class="btn btn-outline-danger">radio 3</label>
+    </div>
+    <!-- todo burada ise radio buton grubu yaptık -->
+
+    <div class="btn-group" role="group" id="açılır-menu">
+        <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">açılır menü</button>
+        <ul class="dropdown-menu" aria-labelledby="açılır-menu">
+            <li><a href="" class="dropdown-item btn btn-danger">murat 1</a></li>
+            <li><a href="" class="dropdown-item btn btn-danger">murat 2</a></li>
+            <li><a href="" class="dropdown-item btn btn-danger">murat 3</a></li>
+            <li><a href="" class="dropdown-item btn btn-danger">murat 4</a></li>
+        </ul>
+    </div>
+    <!-- todo burada ise dropdown-menu yaptık -->
+
+    <div class="btn-group" role="group">
+        <button class="btn btn-primary active">aktif buton</button>
+        <button class="btn btn-primary">normal buton</button>
+        <button class="btn btn-primary" disabled>pasif buton</button>
+    </div>
+
+
+
+
+</div>
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

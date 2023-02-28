@@ -1,0 +1,56 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <!-- * bu sayfada bootstrap5'te spinner kullanımını anlatacağız, bu spinner'lar genellikle bir şey yüklendiği sırada kullanıcıya gösterilir. Eğer buton gibi başka bir nesnenin içinde kullanılacaksa o zaman da bu spinner ile ilgili class'lar aynı badge gibi bir span etiketine verilir çünkü  span etiketi blok değil inline bir etikettir, tüm sayfayı yataylamasına kaplamaz.-->
+<div class="container">
+
+    <div class="spinner-border"></div>
+    <!-- todo etrafında dönen bir spinner animasyon nesnesi için  böyle spinner-border class'ı kullanılır -->
+    <br>
+
+    <div class="spinner-border text-danger"></div>
+    <div class="spinner-border text-success"></div>
+    <!-- todo spinner'a renk vermek için text-(color) class'larını kullanırız  -->
+    <br>
+
+    <div class="spinner-border spinner-border-sm"></div>
+    <!-- todo spinner nesnesinin boyutunu küçültmek için ise "spinner-border" class'ının yanında "spinner-border-sm" kullanılır-->
+    <br>
+<!-- ! -------------------------------------------------------------------------------------->
+<!-- *spinner grow kullanımı -->
+
+    <div class="spinner-grow text"></div>
+    <!-- todo büyüyüp küçülen bir animasyon nesnesi için için ise böyle spinner-grow class'ı kullaılır.  -->
+    <br>
+
+    <div class="spinner-grow text-success"></div>
+    <!-- todo bu spinner'a renk vermek için yine aynı text-(color) class'ları kullanılır -->
+    <br>
+
+    <div class="spinner-grow text-success spinner-grow-sm"></div>
+    <!-- todo bu spinner'ın boyutunu küçltmek için ise "spinner-grow-sm"  class'ı kullanılır -->
+    <br>
+
+
+
+
+
+
+
+
+</div>
+
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

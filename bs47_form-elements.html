@@ -1,0 +1,170 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- * bu kısımda normal form  nesneleri grid sistemiyle birlikte  nasıl oluşturuluyor onu anlattık. -->
+
+    <form action="">
+        <div class="container">
+            <!-- todo burada bu kapsayıcı içinde oluşturduğumuz form elemanları hem ortlansın hem de sağdan soldan bir boşluk alsın diye  ona "container" class'ını verdik-->
+            <div class="row row-cols-1 gy-4 ">
+                <!-- todo burada ise bir div yaptık ve form elemanlarını bir row bileşeni içine aldık. 
+                *   "row-cols-1" diyerek ise her bir satırda yalnızca bir sütun olması gerektiğini söyledik. -->
+
+                <div class="col-9 ">
+                    <!-- todo burda ise satırın sütununu yaptık,  col-9 verdik aynı zamanda ad soyad ile ilgili form elemanlarını bu kapsayıcı içinde yazdık  -->
+
+                    <label for="" class="form-label">Adınız Soyadınız</label>
+                    <!-- todo burada sütunun içine ilk yazdığımız etiket label oldu ve ona "form-label" class'ını verdik böylece label ile aşağıdaki input etiketi arasında bir boşluk oluştu-->
+
+                    <input type="text" class="form-control ">
+                    <!-- todo burada ad soyad kısmı için sütunun içine 2. yazdığımız etiket input etiketidir, bu etiketin type="" özelliğine de türüne göre doğru ifadeyi verdikten sonra, class'ına  "form-control" yazdık böylece o biçimsiz, gölgesiz ve inline özelliğe sahip etiket daha hacimli, tıklanılınca olunca mavi gölgesi olan, yazıldığı yerin genişliğini soldan sağa kaplayan bir etiket oldu.   -->
+
+                    <div class="form-text">ad soyadınız üniversite ile paylaşılacaktır</div>
+                    <!-- todo burada ad soyad kısmı için 3. yazdığımız nesne ise div elementidir, bu span veya p etiket de olabilirdi, temel olarak asıl  mesele label kısmında da burada da  etiket değil, o etikete verilen class'tır. Mesela burada  "form-text" class'ını kullanarak input nesnesine bir açıklama yazısı oluşturduk böylelikle bu class ise yazı hem daha küçük hem de soluk renkli olarak geldi.  -->
+                </div>
+
+                <div class="col-9">
+                    <label for="" class="form-label">Şifreniz</label>
+                    <input type="password" class="form-control">
+                    <div class="form-text">şifreniz 3. taraf gruplarla paylaşılmayacaktır.</div>
+
+                </div>
+                <div class="col-9">
+                    <input type="e-mail" class="form-control" placeholder="e-mail'iniz zaten alınmıştır." readonly>
+                    <!-- todo burada placeholder özelliği sayesinde kullanıcı input nesnesinin içine bir soluk renkli yazı yazabilir böylelikle label etiketi dışında kullanıcının nereye neyi yazması gerektiğini söyleyebileceği bir alan daha bulmuş, bu özellik label etiketine gerek bıraktırmaz. -->
+                    <!-- * readonly özelliğini ise input'a fareyle tıklanabileceğini ama içine bir veri girilemeyeceğini bildirmek için yazdık. -->
+                    <p class="form-text">e-mail'iniz reklamları kişiselleştirmek için kullanılabilir</p>
+                </div>
+
+                <div class="col-9">
+                    <input class="form-control" list="sınıfseçenekleri">
+                    <datalist id="sınıfseçenekleri">
+                        <option value="1. Sınıf"></option>
+                        <option value="2. Sınıf"></option>
+                        <option value="3. Sınıf"></option>
+                        <option value="4. Sınıf"></option>
+                        <option value="5. Sınıf"></option>
+                        <option value="6. Sınıf"></option>
+                    </datalist>
+                </div>
+                <!-- todo bu kısımda ise form nesnesine bastığımız zaman birkaç seçeneğin önümüze çıktığı bir liste yaptık -->
+
+                <div class="col-9">
+                    <textarea name="" id="" cols="30" rows="10" class="form-control"
+                        placeholder="eklemek istedikleriniz"></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- ! ------------------------------------------------------------------------------------------------>
+    <hr class="border border-danger">
+
+    <!-- * burada ise grid sistemiyle yatay olarak nasıl form nesneleri oluşturulur onu gösterdik. Burada en dış row satırının içinde başka row satırları oluşturduk ve onların içine de form kısımlarıyla ilgili etiketleri oluşturduk. Örneğin adres kısmıyla ilgili form elemanlarını bir satıra, istek ile ilgili kısmı başka bir satıra yazdık. Bu kısımların label, input ve span gibi etiketlerini ise satırın sütünları içine aldık ve yatay olarak hizalansın diye 3 etiketin col-x toplamı col-12 sınırını geçmemek şartıyla p etiketlerin her birisini çeşitli col sınıflarını verdiğimiz kapsayıcılar içine aldık. -->
+    <div class="container mt-5">
+        <div class="row row-cols-1 gy-3">
+
+            <div class="col">
+                <div class="row ">
+                    <div class="col-3">
+                        <label for="" class="form-label">adresiniz</label>
+                    </div>
+                    <div class="col-5">
+                        <input type="address" class="form-control form-control-lg">
+                    </div>
+                    <div class="col-auto">
+                        <span class="form-text">adresinizi açık adres olarak yazınız</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="" class="form-label">istekleriniz</label>
+                    </div>
+                    <div class="col-5">
+                        <input type="text" class="form-control form-control-sm">
+                        <!-- todo burada ise input nesnesinin hangi boyutta olacağını bildirmek için "form-control-x(-sm, -lg)" class'ını kullandık -->
+                    </div>
+                    <div class="col-auto">
+                        <span class="form-text">kurum ile ilgili istekler içindir</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ! ------------------------------------------------------------------------------------------------>
+    <hr class="border border-danger">
+    <!-- * burada ise grid sistemiyle responsive bir form oluşturduk böylelikle değişen ekran genişliklerine göre bu form row bileşenin dizaynını sadee bootstrap class'larıyla da değiştirebileceğiz  -->
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <!-- todo burada row satırına  row-cols-1 class'ı yazdıktan sonra "row-cols-md-2" ve "row-cols-xl-2" class'larını da yazdık, bunu yazarak şunu demiş olduk
+            * " bu satır varsayılan olarak sadece 1 sütuna sahip olsun (row-cols-1), eğer ekran genişliği 768px ve yukarısına gelirse bu satır sadece 2 sütuna sahip olsun(row-cols-md-2), eğer ekran genişliği 992px ve yukarısına gelirse  zaman da bir satır sadece 3 sütuna sahip olsun (row-cols-lg-3) dedik. " -->
+
+            <div class="col">
+                <label for="" class="form-label">isim</label>
+                <input type="text" class="form-control" placeholder="metni giriniz">
+                <div class="form-text">bu açıklama yazısıdır, soluk görünür...</div>
+            </div>
+            <div class="col">
+                <label for="" class="form-label">soyisim</label>
+                <input type="text" class="form-control" placeholder="metni giriniz">
+                <div class="form-text">bu açıklama yazısıdır, soluk görünür...</div>
+            </div>
+            <div class="col">
+                <label for="" class="form-label">yaş</label>
+                <input type="number" class="form-control" placeholder="metni giriniz">
+                <div class="form-text">bu açıklama yazısıdır, soluk görünür...</div>
+            </div>
+            <div class="col">
+                <label for="" class="form-label">şifre</label>
+                <input type="password" class="form-control" placeholder="metni giriniz">
+                <div class="form-text">bu açıklama yazısıdır, soluk görünür...</div>
+            </div>
+
+            <div class="col">
+                <label for="" class="form-label">renk seçiniz</label>
+                <input type="color" class="form-control  form-control-color">
+                <!-- todo burada ise bir renk seçici yapmak istediğimiz için ona sadece form control verirsek bu soldan sağa tüm kapsayıcıyı kaplar, ayrıca "form-control-color" verirsek durum düzelir., renk seçicisi bir kare içinde görüntülenir. -->
+                <div class="form-text">bu açıklama yazısıdır, soluk görünür...</div>
+
+            </div>
+
+            <div class="col">
+                <label for="" class="form-label">dosya seç</label>
+                <input type="file" class="form-control">
+                <div class="form-text">bu açıklama yazısıdır, soluk görünür...</div>
+            </div>
+
+            <div class="form-check ">
+                <div class="offset-1">
+                    <!-- todo burada ise "offset-1 " class'ını kapsayıcı olarak input ve label etiketlerine verdik, böylece bu etiketlerin ötelenmesini sağladık. -->
+                    <input type="checkbox" class="form-check-input">
+                    <label for="" class="form-check-label">Beni Hatırla</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

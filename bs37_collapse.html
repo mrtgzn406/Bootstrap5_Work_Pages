@@ -1,0 +1,81 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- * bu sayfada collapse nesnesinin yapımını öğreneceğiz. collapse nesnesi sayesinde sayfalarda açılıp kapanın bir bölüm  oluşurabiliyoruz.-->
+
+    <!-- <a href="#kapan" data-bs-toggle="collapse" class="btn btn-success">resim</a> -->
+    <button class="btn btn-danger" data-bs-target="#kapan" data-bs-toggle="collapse">kapan</button>
+
+    <!-- ! unutma ki eğer collapse butonunu a ile yapıyorsan href="" özelliği olduğu için collapse class'ı verdiğin div'in id özelliğini oraya yazabilirsin fakat eğer butonu button etiketiyle yapacaksan onun href="" özelliği olmadığı için data-bs-target="" özelliğini kullanmalısın.-->
+
+    <div class="collapse" id="kapan">
+        <div class="card w-25">
+            <img class="card-img-top" src="../../images/9.jpg" alt="Title">
+            <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Text</p>
+            </div>
+        </div>
+    </div>
+    <!-- ! -------------------------------------------------------------------------------------->
+    <button class="btn btn-primary" data-bs-target="#çömel" data-bs-toggle="collapse">çömel</button>
+    <div class="collapse collapse-horizontal" id="çömel">
+        <div class="card" style="width:350px;">
+            <img class="card-img-top" src="../../images/8.jpg" alt="Title">
+            <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Text</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ! -------------------------------------------------------------------------------------->
+
+    <button class="btn btn-dark" data-bs-target="#coklu-kapan" data-bs-toggle="collapse">çoklu kapan</button>
+    <!-- todo burada ise bir butonla birden aynı id verilmiş birden fazla collapse nesnesini çalıştırdık.  -->
+
+    <div class="row row-cols-3">
+        <div class="col">
+            <div id="coklu-kapan" class="collapse">
+                <img src="../../images/pexels-1.jpg" alt="" class="w-100">
+            </div>
+        </div>
+        <div class="col">
+            <div id="coklu-kapan" class="collapse">
+                <img src="../../images/pexels-2.jpg" alt="" class="w-100">
+            </div>
+        </div>
+        <div class="col">
+            <div id="coklu-kapan" class="collapse">
+                <img src="../../images/pexels-3.jpg" alt="" class="w-100">
+            </div>
+        </div>
+        <div class="col">
+            <div id="coklu-kapan" class="collapse">
+                <img src="../../images/pexels-4.jpg" alt="" class="w-100">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

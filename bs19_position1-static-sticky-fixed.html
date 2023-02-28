@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container w-25">
+        <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, debitis. Ratione iste quisquam cupiditate adipisci eligendi odio, odit sit qui, quos consequuntur, beatae quod impedit repellat. Vitae voluptatem, debitis obcaecati officiis at impedit sapiente? Reprehenderit exercitationem vitae atque illum sapiente, ducimus id dignissimos! Ducimus dolorum sit explicabo mollitia temporibus hic.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, debitis. Ratione iste quisquam cupiditate adipisci eligendi odio, odit sit qui, quos consequuntur, beatae quod impedit repellat. Vitae voluptatem, debitis obcaecati officiis at impedit sapiente? Reprehenderit exercitationem vitae atque illum sapiente, ducimus id dignissimos! Ducimus dolorum sit explicabo mollitia temporibus hic.</p>
+        
+        <h6 class="bg-primary text-danger p-3 position-sticky top-0">Bu position sticky özelliğidir</h6>
+        <!-- todo bu ise position-sticky ve top-0  class'larını etikete vererek bu nesnenin en fazla top-0 konumuna kadar yukarı götürülmesini sağladık, yani kullanıcı istediği kadar sayfayı aşağı kaydırsın bu nesne enkranda görünen sayfanın en yukarısında konumlanmaya devam eder ama sayfa yukarı kaydırılırsa nesne de aşağıya doğru gider ve bottom-0 verilmediği için yukarıdan aşağı doğru gidilirken ekrandan kaybolabilir -->
+        <!-- ! herhangi bir nesneye position-sticky class'ı verdikten sonra hemen nasıl konumlanacağı ile ilgili class'ları da vermek gerekir, mesela position-sticky verildikten sonra top-0 vb  herhangi bir konumlandırma yapılmazsa nesne direkt sayfada görünmüyor. Ayrıca position-sticky alan nesne bağlamdadır-->
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, debitis. Ratione iste quisquam cupiditate adipisci eligendi odio, odit sit qui, quos consequuntur, beatae quod impedit repellat. Vitae voluptatem, debitis obcaecati officiis at impedit sapiente? Reprehenderit exercitationem vitae atque illum sapiente, ducimus id dignissimos! Ducimus dolorum sit explicabo mollitia temporibus hic.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, debitis. Ratione iste quisquam cupiditate adipisci eligendi odio, odit sit qui, quos consequuntur, beatae quod impedit repellat. Vitae voluptatem, debitis obcaecati officiis at impedit sapiente? Reprehenderit exercitationem vitae atque illum sapiente, ducimus id dignissimos! Ducimus dolorum sit explicabo mollitia temporibus hic.</p>
+        <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, debitis. Ratione iste quisquam cupiditate adipisci eligendi odio, odit sit qui, quos consequuntur, beatae quod impedit repellat. Vitae voluptatem, debitis obcaecati officiis at impedit sapiente? Reprehenderit exercitationem vitae atque illum sapiente, ducimus id dignissimos! Ducimus dolorum sit explicabo mollitia temporibus hic.</p>
+        <span class="bg-danger bg-gradient text-light p-3 position-static bottom-0"> bu position static'tir </span>
+        <!-- todo bu position-static ise varsayılan olarak gelen alışageldiğimiz normal konumlandırmadır. -->
+        <!-- ! bu konumlandırmada top right bottom left özellikleri işlemez. Ayrıca position-static özelliğine sahip nesne bağlamdadır. -->
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, debitis. Ratione iste quisquam cupiditate adipisci eligendi odio, odit sit qui, quos consequuntur, beatae quod impedit repellat. Vitae voluptatem, debitis obcaecati officiis at impedit sapiente? Reprehenderit exercitationem vitae atque illum sapiente, ducimus id dignissimos! Ducimus dolorum sit explicabo mollitia temporibus hic.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, debitis. Ratione iste quisquam cupiditate adipisci eligendi odio, odit sit qui, quos consequuntur, beatae quod impedit repellat. Vitae voluptatem, debitis obcaecati officiis at impedit sapiente? Reprehenderit exercitationem vitae atque illum sapiente, ducimus id dignissimos! Ducimus dolorum sit explicabo mollitia temporibus hic.</p>
+        <span class="bg-dark text-info position-fixed top-0 end-0 p-3">
+          Bu sitenin tüm hakları saklıdır
+        </span>
+        <!-- *burada position fixed özelliğini vermek için gerekli position-fixed class'ını kullandık böylelikle artık bu nesne bağlamdan çıktı ve sayfada diğer etiketlerden, nesnelerden bağımsız olarak konumlanmaya başladı.  Sonrasında bottom-0 end-0 class'larını vererek yazıyı sağ alta yapıştırdık. Artık kullanıcı sayfayı istediği kadar sağa sola kaydırsın farketmez, o ilk başta konumlandıırıldığı yerde çivi gibi çakılmıştır, scrollbar hareketlerine veya yanındaki, üstündeki, altındaki nesnelere, etiketlere göre yer değiştirmez-->
+        <!-- todo herhangi bir nesneye position-fixed class'ı verdikten sonra hemen nasıl konumlanacağı ile ilgili class'ları da vermek gerekir, mesela position-fixed verildikten sonra top-0 vb  herhangi bir konumlandırma yapılmazsa nesne direkt sayfada görünmüyor -->
+        <!-- ! Position-fixed özelliği nesnenin sayfaya göre değil, sayfanın ekranda görünen kısmına göre, yani viewport'a göre konumlandırılmasını sağlar. Yani kendisini viewport'a göre kesin olarak konumlandırır. Etrafındaki , bulunduğu yerdeki diğer etiketlerin konumu onu etkilemez, o da diğer etiketlerin konumunu etkilemez çünkü bağlamda çıkmıştır. top-50, left-25, right-75 gibi sınıfları alabilir ve kendisini viewport'un kenarlarına göre konumlandırır. -->
+    </div>
+
+
+
+
+
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

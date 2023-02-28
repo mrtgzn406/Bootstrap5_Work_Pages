@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 500px;
+        }
+        /* .container div{
+            width: 100px;
+        } */
+    </style>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="container d-flex flex-row bg-secondary bg-gradient p-5 justify-content-between align-items-center flex-wrap ">
+    <div class="bg-info p-3 border border-3 border-success">içerik 1</div>
+    <div class="bg-info p-3 border-end border-4 border-warning">içerik 2</div>
+    <div class="bg-info p-3 border-start border-5 border-primary">içerik 3</div>
+    <div class="bg-info p-3 border border-bottom-0 border-5 border-danger">içerik 4</div>
+    <div class="bg-info p-3 border border-4 border-dark rounded-5">içerik 5</div>
+    <div class="bg-info p-3 border border-top-0 border-5 border-white rounded-3">içerik 6</div>
+</div>
+
+<!-- todo bu örneklerle biz border sınıfını vereceğimiz kenarlık özelliklerinin hangi kenarlar olduğunu bildiriyoruz, mesela "border" yazarsak bu tüm kenarlıklara işlemi uygula demektir, "border-bottom" yazarsak verilen özellikleri sadece alt kenarlığa uygula demektir. O kenarlığın ne kadar büyük oalcağını ise en sonuna yazdığımız sayı belirler.                                                             Örneğin; border-bottom-1 en ince kenarlığı border-bottom-5 en kalın kenarlığı temsil eder  -->
+
+<!-- * kenarlıklara renk vermek için ise border-danger, border-success gibi ifadeler kullanırız.  -->
+
+<!-- ? kenarlık yarıçaplarını ayarlayıp kenarları yuvarlatmak için ise rounded sınıfını kullanırız, rounded-1 en küçük yuvarlatma,rounded-2 en büyük yuvarlatmayı temsil eder-->
+
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

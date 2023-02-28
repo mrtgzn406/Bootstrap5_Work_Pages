@@ -1,0 +1,112 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- * bu sayfada validation class'ları anlatılmıştır . Bu class'lar sayesinde kullanıcıyı veriyi düzgün girip girmemesine göre kullanıcının önüne farklı renkler, uyarılar, geri bildirimler çıkartırız. -->
+
+
+    <form action="" class="needs-validation was-validated" method="post">
+        <!-- todo eğer veri girilirken veri girişinin doğruluğuna göre input kenarlıklarının kırmızı/yeşil olmasını istiyorsak "was-validated" yazarız
+        ? yanlış veri ggirilirse input'ların kenarlıkları kırmızı olur, doğru veri girilirse yeşil olur.-->
+        <!-- ! "needs-validation" class'ının işlevini bilmiyorsun, öğren. -->
+
+        <div class="container">
+            <div class="row row-cols-1 mt-5">
+
+                <div class="col">
+                    <div class="input-group has-validation">
+                        <!-- !has validation işlevini araştır, bilmiyorsun -->
+                        <input type="text" class="form-control " required>
+                        <label for="" class="input-group-text">@student.adiguzel.edu.tr</label>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <label for="" class="form-label">E postanız:</label>
+                    <input type="email" class="form-control">
+                    <div class="invalid-feedback">E Postanız eksik/hatalı girildi</div>
+                    <div class="valid-feedback">Her şey yolunda görünüyor</div>
+                    <!-- todo burada biz input-group nesnesine kardeş olarak bir div etiket oluşturduk ve ona        "(in)valid-feedback" class'ını verdik. Bu sayede bu inputun içine bir veri yazılırken verinin o anki doğruluğuna göre "valid-feedback" veya "invalid-feedback" class'ına sahip eitketlerdeki mesaj görüntülenir -->
+                </div>
+
+                <div class="col position-relative">
+                    <label for="" class="form-label">Şifrenizi Giriniz</label>
+                    <input type="password" class="form-control" required minlength="8">
+                    <!-- todo burada input nesnesine "required" yazarak bu alanın doldurulmasının zorunlu olduğunu programa söyledik, minlenght="8" diyerek ise en az buraya 8 karakter girilmesi gerektiğini söyledik. -->
+
+                    <div class="invalid-tooltip">en az 8 karakterli şifre giriniz</div>
+                    <div class="valid-tooltip">Her şey doğru görünüyor</div>
+                    <!-- todo eğer valid, invalid nesnesini feedback olarak değil, tooltip olarak yapmak istiyorsak (in)valid-feedback yerine  "(in)valid-tooltip" yazarız -->
+
+                </div>
+                <div class="col">
+                    <label for="" class="form-label">Rengi Seçiniz</label>
+                    <input type="color" class="form-control form-control-color " required>
+                </div>
+
+                <div class="col">
+                    <label for="" class="form-label">Aralığı Seçin</label>
+                    <input type="range" class="form-control is-invalid">
+                </div>
+
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control " placeholder="isminizi giriniz">
+                        <label for="" class="form-label">isminiz</label>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" required>
+                        <label for="" class="form-check-label">Kullanım şartlarını kabul ediyorum</label>
+                        <div class="invalid-feedback">Kullanım şartlarını kabul etmelisiniz</div>
+                        <div class="valid-feedback">Her şey yolunda</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="address" class="form-control" minlength="30" placeholder="adres">
+                        <label for="" class="form-label">Adresiniz(En az 30 karakter)</label>
+                    </div>
+
+
+                </div>
+                <div class="col"></div>
+                <div class="col">
+                    <button type="submit" class="btn btn-danger d-block w-100 mt-5">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

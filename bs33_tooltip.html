@@ -1,0 +1,42 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="container mt-5" title="normal tooltip kullanımı">
+    
+    
+        <button  class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="right" title="tooltip">yukarı tooltip</button>
+        <button class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="right" title="tooltip">sağ tooltip</button>
+        <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="tooltip">alt tooltip</button>
+        <button class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="left" title="tooltip">sol tooltip</button>
+</div>
+    <!-- todo işte tooltip'i böyle oluştururuz, data-bs-toggle="tooltip" kodu onun tooltip olması için gerekli javascript kodlarını getirirken, data-bs-placement="" kodunun değerine ise tooltip'i nereye yerleştireceğimizi yazarız, data-bs-placement="" değerleri 4 tanedir, bunlar; top, right, bottom, left değerleridir, default değer top değeridir. title="" attribute'unu ise tooltip'te  gösterilecek metni yazarız. -->
+    
+    <!-- ! eğer tooltip'in normalde görüneceği yer ekranda gözükmüyorsa tooltip otomatikman ekranda görünen başka yerde açığa çıkar  -->
+
+    <div class="container mt-5">
+        <button class="btn btn-info " data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="Bu <b>kalın</b> bir yazıdır ve <code> Shift+Alt</code> bi klavye kısayoludur">html ise tooltip</button>
+    </div>
+    <!-- todo burada ise title="" özelliği içine yazılan metinde html kodları varsa onlar çalıştırılsın, metin olarak gösterilmesin demiş oluyoruz. Böylelikle tooltip içine çeşitli html biçimlendirmeleri yapabiliyoruz-->
+    
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+    <!-- ! bu javascript kodunu ise bootstrap'ın tooltip özellikleri tüm data-bs-toggle="tooltip" verdiğimiz nesnelere uygulansın diye yazdık, 
+    Not:  bu bizim yazdığımız javascript kodu yukarıda da gördüğümüz "Javascript bundle with popper" linkinin aşağısına yazılmalıdır, aksi takdirde kod işlemiyor.-->
+</body>
+</html>

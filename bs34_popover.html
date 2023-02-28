@@ -1,0 +1,43 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <!-- *popover butona basıldığında ortaya çıkan bir tür küçük bilgi ekrancığıdır, bu ekran butona basıldığında kodlar yardımıyla tetiklenip ortaya çıkar fakat tooltip gibi kendi kendine gitmez öylece kalır ancak butona 2. defa basılırsa veya kodlarla müdahale edilirse popover gider  -->
+    <div class="container mt-5 p-5">
+        <button class="btn btn-danger" data-bs-toggle="popover" data-bs-placement="top" title="başlık" data-bs-content="ben üstteyim ve title özelliği aldım">top popover</button>
+        <button class="btn btn-warning" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="ben sağdayım ve focus özelliği aldım">right popover</button>
+        <button class="btn btn-info" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="ben alttayım">bottom popover</button>
+        <button class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="ben soldayım">left popover</button>
+
+    </div>
+        <!-- todo işte popover'ı böyle oluştururuz, data-bs-toggle="popover" kodu onun popover olması için gerekli javascript kodlarını getirirken, data-bs-placement="" kodunun değerine ise popover'ı nesnenin neresine yerleştireceğimizi yazarız, data-bs-placement="" değerleri 4 tanedir, bunlar; top, right, bottom, left değerleridir, default değer top değeridir. data-bs-content="" özelliğine ise popover'te  gösterilecek metni yazarız, title="" özelliği ise data-bs-content="" ile yazdığımız içeriğin başlığını oluşturmaya yarar. -->
+
+    <div class="container mt-5">
+        <button class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="top" title="hover özelliği" data-bs-content="buradayım" data-bs-trigger="hover">hover</button>
+        <button class="btn btn-light" data-bs-toggle="popover" data-bs-placement="right" title="focus özelliği" data-bs-content="buradayım" data-bs-trigger="focus">hover</button>
+        <button class="btn btn-muted" data-bs-toggle="popover" data-bs-placement="bottom" title="click özelliği" data-bs-content="buradayım" data-bs-trigger="click">hover</button>
+
+        
+    </div>
+    <!-- todo burada ise data-bs-trigger="" özelliğine verilebilecek değerleri yazdık, bunlar 3 tanedir ve şudur: click, focus, hover. click varsayılan olarak gelen metoddur, hover butonun üstüne gelindiğinde popover'ı açar gittiğinde kapatır, focus ise butona tıklandığında popover'a açar ama kapatma için popover'ın üstüne basılmasını gerektirir. -->
+    <div class="container mt-5">
+        <button class="btn btn-success" data-bs-toggle="popover" data-bs-placement="bottom" title="<em> kısayol </em> tuşları" data-bs-content="unutma ki <kbd>Ctrl+D</kbd> aynılarını seç kısayoludur <code> data-bs-html= </code> ise bir html özelliğidir." data-bs-html="true" >murat</button>
+    </div>
+    <!-- todo burada ise data-bs-html="true" özelliğini kullanarak html biçimlendirmeleri yaptık. Bu özellik yazıldığı zaman "html etiketlerini kod olarak algıla normal yazı olarak algılama" demektir. bu sayede html etietleriyle data-bs-content="" ve data-bs-title="" içinde biçimlendirme yapabiliriz.-->
+     
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+</script>
+</body>
+</html>

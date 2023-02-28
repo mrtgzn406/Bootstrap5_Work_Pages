@@ -1,0 +1,93 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- <button class="btn btn-primary" id="buton_id">toast 1</button>
+    <div class="toast position-fixed top-0 end-0" id="toast_id">
+        <div class="toast-header">
+            <span class=""><i class="bi bi-youtube fs-4"></i></span>
+            <strong class="ms-1 me-auto">Youtube</strong>
+            <button class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vero distinctio est in quam, ratione
+            doloribus fugiat a. Deserunt eveniet laboriosam qui dolorem. Impedit animi harum facere nihil similique
+            obcaecati?
+            Cumque illum cupiditate sed voluptate molestiae magni libero harum quidem ut rerum aut neque eligendi, iusto
+            consequuntur laudantium provident magnam explicabo cum placeat non blanditiis unde. Nihil commodi itaque
+            sapiente.
+        </div>
+    </div> -->
+    <!-- ! ---------------------------------------------------------------------->
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+    <!-- todo bu kısım toast nesnesinin butonunu oluşturmak için kullandığımız öylesine bir butondur, bu buton javascript kodlarından tetiklenir -->
+
+    <div class="toast-container position-fixed top-50 start-50">
+        <!-- todo bu kısım içine birden fazla toast koyabileceğimiz bir kapsayıcıdır-->
+        <div id="liveToast" class="toast " role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-animation="false" data-bs-autohide="false" data-bs-delay="1000">
+            <!-- todo burası ise toast bileşeninin kendisidir. -->
+            <!-- * data-bs-animation="false" toast bileşeninin animasyonla açılmasını engeller, 
+                 * data-bs-autohide="false" toast bileşeninin bir kere açıldığında kendi kendine kapanmasını önler
+                 * data-bs-delay="1000" toast bileşeninin tetiklendikten sonra 1000 milisaniye yani 1 saniye ekranda durmasını sağlar-->
+            <!-- ! Not: bu özelliklerin hepsi javascript komutlarıyla da değiştirlebilir. -->
+            <div class="toast-header">
+                <!-- todo burası da toast bileşeninin başlığını yapmak için kullanılır -->
+
+                <span><i class="bi bi-youtube fs-1 text-danger"></i></span>
+                <!-- todo bu kısmı toast ekranda belirdiğinde toast-header kısmındaki logosu olsun diye yaptık  -->
+
+                <strong class="me-auto">Bootstrap</strong>
+                <!-- todo bu kısmı toast ekranda belirdiğinde toast-header kısmındaki ana başlığı olsun diye yaptık  -->
+
+                <small>11 mins ago</small>
+                <!-- todo bu kısmı toast ekranda belirdiğinde toast-header kısmındaki bu uyarının kaç dakika önce belirdiğini bildiren küçük bir yazı olsun diye yaptık  -->
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                <!-- todo bu butonu da toast-header kısmının en sağındaki kapanma butonu oluşsun diye yaptık,
+                * butonun siyah renkli "X" işaretini alması için on "btn-close" class'ını verdik, beyaz olmasını isteseydik "btn-close-white" class'ını verirdik,
+                * butonun kapanma işlevini yerine getirmesi içinse button etiketine data-bs-dismiss="toast" özelliğini verdik.  -->
+            </div>
+            <div class="toast-body">
+                <!-- todo bu kısım ise toast içerisinde ana içeriği yerleştirdiğimiz kısımdır -->
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script>
+        // burada toast bileşeninin çalışması için gerekli olan bazı javascript kodlarını derledik.
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastLiveExample)
+
+                toast.show()
+            })
+        }
+
+    </script>
+</body>
+
+</html>

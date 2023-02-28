@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h4 class="container text-center">Izgara Sistemi</h4>
+    <!-- bu sayfada bootstrap grid sistemi anlatılmaya çalışılmıştır.
+    grid yapmak için ilk önce kapsayıcı div'in class'ına row yazılır, varsayılan olarak bir satır kendisini
+    en 12 sütuna böler, bundan dolayı tüm bölümlendirmeler bu 12'lik sistemi baz alarak gerçekleştirilir. 
+    Mesela aşağıdaki örnekte kapsayıcı div class'ına row yadıktan sonra etiketin içerisine girip 12 tane div yazdık,
+    ve her birinin class'ına col-1 yazdık. kapsayıcının içinde zaten 12 tane div olduğı için ve class olarak da
+    col-1 aldıkları için hepsi satırın 12 parçasından 1 parça aldılar ve eşit olarak genişlik dağıtıldı.
+    Eğer kapsayıcı içindeki divlere yani aslında satırın sütunları sayılan eitketlere col-1 yazmasaydık
+    normal etiket gibi davranır, sütun gibi davranmazdı.  
+
+    Not: Eğer kapsayıcının içindeki divlere col yazsaydık genişlik aralarında eşit olarak bölüşülürdü.
+
+    NOt: Örneğin kapsayıcının içinde 11 tane col veya col-1 class'ına sahip etiket varsa ve 1 tane de 
+    col-4, col-7 gibi toplam sütun sayısının 12'yi geçmesine sebep olacak bir etiket varsa o zaman bir satır
+    en fazla 12'ye bölünebildiği için, 12 sütun genişliğinin aşılmasına sebep olan etiket direkt normal 
+    satırın aşağısında görüntülenir -->
+        <div class="container-fluid">
+            <div class="row mt-4">
+                <div class="col-1 bg-success text-white">col-1</div>
+                <div class="col-1 bg-dark text-white">col-1</div>
+                <div class="col-1 bg-warning text-white">col-1</div>
+                <div class="col-1 bg-danger text-white">col-1</div>
+                <div class="col-1 bg-info text-white">col-1</div>
+                <div class="col-1 bg-secondary text-white">col-1</div>
+                <div class="col-1 bg-primary text-white">col-1</div>
+                <div class="col-1 bg-success text-white">col-1</div>
+                <div class="col-1 bg-dark text-white">col-1</div>
+                <div class="col-1 bg-warning text-white">col-1</div>
+                <div class="col-1 bg-danger text-white">col-1</div>
+                <div class="col-1 bg-info text-white">col-1</div>
+            </div>
+
+            <div class="row mt-4 text-white">
+                <div class="col-2 bg-success">col-2</div>
+                <div class="col-2 bg-dark">col-2</div>
+                <div class="col-2 bg-warning">col-2</div>
+                <div class="col-2 bg-danger">col-2</div>
+                <div class="col-2 bg-info">col-2</div>
+                <div class="col-2 bg-secondary">col-2</div>
+            </div>
+            <!-- bu örnekte 12 sütuna bölünebilen satırdan herkes 2 sütun almıştır çünkü her etiket
+            col-2 sınıfına sahiptir ve row class'ına sahip kapsayıcının içinde toplamda 6  etiket vardır
+            6 col-2 = 12 col yani 12 sütun eder , genişlik eşit olarak paylaştırılmıştır   -->
+
+            <div class="row mt-4 text-white">
+                <div class="col-3 bg-success">col-3</div>
+                <div class="col-3 bg-dark">col-3</div>
+                <div class="col-3 bg-warning">col-3</div>
+                <div class="col-3 bg-danger">col-3</div>
+            </div>
+            <!-- bu örnekte 12 sütuna bölünebilen satırdan herkes 3 sütun almıştır çünkü her etiket
+            col-3 sınıfına sahiptir ve row class'ına sahip kapsayıcının içinde toplamda 4  etiket vardır
+            4 col-3 = 12 col yani 12 sütun eder , genişlik eşit olarak paylaştırılmıştır   -->
+
+
+            <div class="row mt-4 text-white">
+                <div class="col-4 bg-success">col-4</div>
+                <div class="col-4 bg-dark">col-4</div>
+                <div class="col-4 bg-warning">col-4</div>
+            </div>
+            <!-- bu örnekte 12 sütuna bölünebilen satırdan herkes 4 sütun almıştır çünkü her etiket
+            col-4 sınıfına sahiptir ve row class'ına sahip kapsayıcının içinde toplamda 3  etiket vardır
+            3 col-4 = 12 col yani 12 sütun eder , genişlik eşit olarak paylaştırılmıştır   -->
+
+
+            <div class="row mt-4 text-white">
+                <div class="col-6 bg-success">col-6</div>
+                <div class="col-6 bg-dark">col-6</div>
+            </div>
+            <!-- bu örnekte 12 sütuna bölünebilen satırdan herkes 6 sütun almıştır çünkü her etiket
+            col-6 sınıfına sahiptir ve row class'ına sahip kapsayıcının içinde toplamda 2  etiket vardır
+            2 col-6 = 12 col yani 12 sütun eder , genişlik eşit olarak paylaştırılmıştır.
+           -->
+
+         <div class="row mt-4">
+            <div class=" col bg-success text-white">col</div>
+            <div class=" col bg-dark text-white">col</div>
+            <div class=" col bg-warning text-white">col</div>
+            <div class=" col bg-danger text-white">col</div>
+            <div class=" col bg-info text-white">col</div>
+            <div class=" col bg-secondary text-white">col</div>
+            <div class=" col bg-primary text-white">col</div>
+            <div class=" col bg-success text-white">col</div>
+            <div class=" col bg-dark text-white">col</div>
+            <div class=" col bg-warning text-white">col</div>
+            <div class=" col bg-danger text-white">col</div>
+            <div class=" col bg-info text-white">col</div>
+            <div class=" col bg-success text-white">col</div>
+            <div class=" col-5 bg-dark text-white">col-5</div>
+         </div>
+         <!-- bu örnekte ise row satırına 13 tane col sınıfına sahip etiket, 1 tane de col-5 sınıfına sahip 
+            etiket girilmiştir. Bundan dolayı en fazla 12 sütuna bölünebilen satırın 5 sütünlük genişliği
+            col-5 sınıfına sahip son etikete giderkeni geriye kalan 7 sütunluk genişlik diğer etiketler 
+            arasında eşit olarak paylaştırılmıştır çünkü diğer etiketler sadece col sınıfına sahiptir.
+            Eşit olarak 7 sütunluk genişliğin 13 etikete paylaştırılmasının sebebi onların col-1, col-3 gibi
+            kesin sütun sayısı talep eden bir etiket olmamalarıdır. Öyle olsalardı satırın içeriğinin bir kısmı
+            taşmadan dolayı satırın aşağısında görünürdü  -->
+
+
+        
+        <div class="row mt-4 text-white">
+            <div class="col-2 bg-success">col-2</div>
+            <div class="col-5 bg-dark">col-5</div>
+            <div class="col-4 bg-warning">col-4</div>
+            <div class="col-1 bg-danger">col-1</div>
+        </div>
+        <!-- bu örnekte ise satırın içinde 4 etiket vardır ve her biri farklı col class'larına sahiptir ama
+        bakıldığında bu class'lardaki sütun toplamı 12 eder, işte grid sistemini kullanarak satıra sütun bazlı
+        oransal genişlik verebiliriz. Böylelikle toplamda en fazla 12 sütuna bölünebilecek satırın içindeki
+        etiketlere farklı sütun boyutlandırmaları yapabiliyoruz, tüm sütun boyutları birbirinin aynısı olmak
+        zorunda değildir -->
+
+
+        <div class="row mt-4 text-white">
+            <div class="col-4 py-2 bg-success">col-4</div>
+            <div class="col-4 py-2 bg-dark">
+                <div class="row">
+                    <div class="col-4 bg-primary">col-4</div>
+                    <div class="col-4 bg-info">col-4</div>
+                    <div class="col-4 bg-danger">col-4</div>
+                </div>
+            </div>
+            <div class="col-4 py-2 bg-warning">col-4</div>
+        </div>
+        <!-- bu örnekte ise bir satırı ilk önce col-4 sınıflarıyla 3 sütuna böldük ardından 2. sütuna bir satır
+        daha ekledik ve onun da içinde col-4 sınıfına sahip 3 sütun vardı. Böylelikle içe içe bir grid sistemi yaptık  -->
+
+        <div class="row mt-4 text-white row-cols-3">
+            <div class="col-8 bg-success">col-8</div>
+            <div class="col bg-dark">col</div>
+            <div class="col bg-danger">col</div>
+            <div class="col bg-primary">col-6</div>
+            <div class="col bg-secondary">col-4</div>
+        </div>
+        <!-- !bu örnekte ise row class'ını verdiğimiz kapsayıcıya aynı zamanda row-cols-3 class'ını verdik.Böylelikle kapsayıcıya eğer sadece sağ tarafında bir değer olmayan col sınıfına sahip etiketler veya hiç bu sınıfı almamış etiketler varsa onlardan ilk 3 tanesini satırın genişliğine eşit olarak paylaştır dedik, satır toplamda 3'e bölüneceği için her bir sütun %33.33333 oranında genişliğe sahip olur. Fakat bu örnekte biz kapsayıcı içindeki 1. etikete col-8 verip 2 sütunun yerini kapla dediğimiz için 1. sütun %66.666 oranında bir genişliğe sahip oldu böylelikle 2 sütunluk yer direkt gitti geriye 1 sütunluk yer kaldı, onu da col class'ını verdiğimiz 2. etiket %33.33333 oranla doldurdu. Geriye kalan diğer tüm etiketler
+        ise taşmadan dolayı aşağıya kaydı böylelikle 
+        "row-cols-3" class'ı    çalışmış oldu -->
+
+        <div class="row mt-4 text-white row-cols-3-auto">
+            <div class="col-3 bg-success">col-3</div>
+            <div class="col-5 bg-dark">col-5</div>
+            <div class="col-4 bg-danger">col-4</div>
+            <div class="col bg-primary">col</div>
+            <div class="col bg-secondary">col</div>
+            <div class="col bg-info">col</div>
+            <div class="col bg-warning">col</div>
+        </div>
+        <!-- bu örnekte ise row class'ını verdiğimiz kapsayıcıya aynı zamanda row-cols-3-auto class'ını verdik.
+        Böylelikle kapsayıcıya eğer sadece col sınıfına sahip etiketler varsa onların genişliğini satırın
+        genişliğine göre eşit olarak paylaştır dedik. Fakat bu örnekte biz kapsayıcı içindeki 1. etikete col-3,
+        2. etikete col-5, 3. etikete col-4 verdiğimiz için bunlar 12 sütunluk satırın tüm sütun genişliklerini kaplamış 
+        oldular, bundan dolayı sağ yanına bir sütun sayısı yazılmamış col class'lı etiketler sütun genişliği dolduğu 
+        için satırın aşağısında görüntülenir. -->
+
+<!-- ------------------------------------------------------------------------------- -->
+<!-- Önemli Konu: Bu örnekte grid sistemde nasıl responsive tasarım yapıldığı anlatılacaktır. Üstteki örneklerden 
+farklı bir konu anlatılacaktır. -->
+
+
+        <hr style=" border-bottom: 10px solid rgb(17, 0, 255); ">
+        <div class="row mt-4 text-white">
+            <div class="col-6 col-lg-3 bg-success">col-6</div>
+            <div class="col-6 col-lg-3 bg-dark">col-6</div>
+            <div class="col-6 col-lg-3 bg-danger">col-6</div>
+            <div class="col-6 col-lg-3 bg-primary">col-6</div>
+        </div>
+        <!-- yukarıdaki örnekte ise normalde col-6 class'ına sahip olan ve bu nedenle satırın yarısını kaplayan
+        etiketler görüyoruz. Taa ki 992px'e yani large genişliğine kadar satırın içindeki etiketler col-6 class'ını
+        uygulamaya devam eder.
+        
+        Sayfa genişliği 992px ve yukarısına gelindiğinde ise col-lg-3 class'ını yazdığımız için satırın içindeki 
+        etiketler 3 sütunluk genişliklere sahip olurlar. Bu örnekte toplamda 4 etiket olduğu için ve her etiket 3
+        sütunluk yer kapladığı için 12 sütunluk yeri tamamen 4 etiket doldurur.
+    
+        NOt: Eğer nesneye col-lg-3 yazarsan large genişlik ve üstünde olan tüm genişliklere aynı özellik uygulanır,
+        yani bizim col-lg-3yazmamız demek aynı zaman col-xl-3 ve col-xxl-3 yazmamız demek-->
+
+        <div class="row mt-4 text-white">
+            <div class="col-6 col-md-3 col-xl-2 bg-success">col-6</div>
+            <div class="col-6 col-md-3 col-xl-2 bg-dark">col-6</div>
+            <div class="col-6 col-md-3 col-xl-2 bg-danger">col-6</div>
+            <div class="col-6 col-md-1 col-xl-2 bg-primary">col-6</div>
+            <div class="col-6 col-md-1 col-xl-2 bg-secondary">col-6</div>
+            <div class="col-6 col-md-1 col-xl-2 bg-warning">col-6</div>
+        </div>
+        <!-- Bu örnekte ise normalde etiketler col-6 class'ına sahiptir yani satırın yarısını kaplar. 
+        col-6 class'ından sonra ilk 3 div etiketine verdiğimiz col-md-3 sınıfı sayfa genişliği 768px ve yukarısında 
+        o 3 etiketin 3 sütunluk yer kaplamasını sağlar, son 3 div etiketine verdiğimiz col-md-1 sınıfı ise onların
+        1 sütunluk yer kaplamasını sağlar böylece satırın içindeki bütün etiketler 768px'e gelindiğinde satırı tam 
+        doldurur. 
+    
+        sayfa genişliği xl olduğunda yani 1200px ve yukarısına geldiğinde ise col-xl-2 sınıfı devereye girer ve
+        tüm etiketleri 2 sütunluk yer kaplayacak şekilde ayarlar toplamda 6 etiket olduğu için 6 * col2 = 12 col yani
+        12 sütun eder. Tüm etiketler satırı tam olarak doldurulur, taşma olmaz.-->
+   
+        
+
+        <div class="row mt-4 text-white">
+            <div class="col-12 col-md-6 col-xl-3 bg-success">col-12</div>
+            <div class="col-12 col-md-6 col-xl-3 bg-dark">col-12</div>
+        </div>
+
+        <div class="row mt-4 text-white">
+            <div class="col-md-6 col-xl-3 bg-success">col-12</div>
+            <div class="col-md-6 col-xl-3 bg-dark">col-12</div>
+        </div>
+        <!-- yukarıdaki iki örnek aynı sonucu üretir, çünkü bootstrap 5'te bir satır içindeki etiketlere normal bir 
+        col değeri ( örneğin col-7 gibi) yazılmamışsa fakat col-md-5, col-xl-6 gibi responsive ifadeler 
+        yazılmışsa bootstrap varsayılan olarak o ifadeler devreye girene kadar etiketi col-12 verilmiş gibi davranır,
+        tüm satırın 12 sütunluk genişliğini kaplar. -->
+
+        <div class="row text-white mt-4">
+            <div class="col-3 bg-success py-2">aşağı kaydır</div>
+            <div class="col-3 bg-danger py-2">aşağı kaydır</div>
+            <div class="w-100"></div>
+            <div class="col-3 bg-warning py-2">aşağı kaydır</div>
+            <div class="col-3 bg-info py-2">aşağı kaydır</div>
+            <div class="col-3 bg-primary py-2">aşağı kaydır</div>
+        </div>
+        <!-- eğer ikinci bir satır açmadan tüm sütunları da doldurmadan satır içindeki etiketleri aşağıda gçrüntülemek istiyorsak ayırmak istediğimiz eitketlerin arasına bir div etiketi daha koyar, class="w-100" özelliğini veririz. Böylelikle ayrım yapılmış olur ve div de görünmez -->
+
+
+    </div>
+        <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

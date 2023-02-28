@@ -1,0 +1,173 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <button class="btn btn-danger" data-bs-target="#modal_1" data-bs-toggle="modal">modal'ı tetikle</button>
+    <div class="modal" id="modal_1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">İşlem Bilgisi</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Çıkış yapmak istiyon mu la harbi ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">iptal</button>
+                    <button type="button" class="btn btn-success">Onayla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- *normal modal kullanımı böyledir, modal aslında kullanıcı bir işlem yaptığında onun önüne bir ekran çıkartmamızı sağlayan bir tasarımdır, biz bu ekranda istersek "kullancıcı sözleşmesi"ni gösteririz, istersek "bu işlemi yapmak istediğinize emin misiniz ?" tarzı sorular sorup onay ve ret isteriz, istersek de başka amaaçlar için kullanırız. -->
+    <!-- ! aşağıda yaptığımız diğer modal örnekleri çeşitli değişiklikler içerdiği için yapılmıştır. -->
+    <!-- ! ----------------------------------------------------------------------------------------------------->
+
+    <button class="btn btn-primary" data-bs-target="#modal_2" data-bs-toggle="modal">2. modal'o tetikle</button>
+
+    <div class="modal fade" data-bs-backdrop="static" id="modal_2">
+        <!-- todo fade class'ını vererek ise modal'ın bir gölge efektiyle açılıp kapanmasını sağladık. -->
+        <!-- * data-bs-backdrop="static" özelliği sayesinde de kullanıcı modal'daki butonlardan birine basmadan modal'dan çıkmamasını sağladık, kullanıcı artık ekranın boş bir tarafına tıklayarak modal'dan çıkamaz -->
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <!-- todo burada "modal-dialog-centered" class'ını vererek, modal'ın sayfanın x ve y düzleminde ortada görünmesini sağldık, normalde üstte görünür -->
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">işlem bilgisi</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <span>Bu site korunmuyor ve kimlik hırsızlığı yapıyor olabilir, yine de siteye gitmek istiyor
+                        musunuz ?</span>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary text-bg-secondary" data-bs-target="#modal_2"
+                        data-bs-dismiss="modal">İptal</button>
+                    <button class="btn btn-success text-bg-success">onayla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ! ----------------------------------------------------------------------------------------------------->
+
+    <button class="btn btn-warning" data-bs-target="#modal_3" data-bs-toggle="modal">3. Modal'o tetikle</button>
+    <!-- * bu butonu ve bu butonun data-bs-target="" , data-bs-toggle="modal" özelliklerini sırf modal'ları çalıştırması için oluşturduk. -->
+
+    <div class="modal " id="modal_3">
+        <!-- todo modal bileşeninin boyutunu ayarlamak için "modal-sm", "modal-lg" ve "modal-xl" class'laarını modal'ı oluşturan ve "modal" class'ına sahip en dış kapsayıcıya veririz. -->
+
+        <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-xl-down">
+            <!-- todo burada ise eğer bir modal'ın içeriği modal'a sığmıyorsa modal'da scrollbar çıkmasını sağladık çünkü normalde scrollbar modal'ın içinde değil sayfanın içinde çıkar. -->
+            <!-- ? modal-dialog div'inin yanında verdiğimiz  "modal-fullscreen" class'ı ise modal'o tam ekran boyutuna getiriyor. Ekran boyutu belli bir küçklüğe geldikten sonra modal'ın tam ekran olması için ise
+            modal-fullscreen-sm-down  
+            modal-fullscreen-md-down  
+            modal-fullscreen-lg-down  
+            modal-fullscreen-xl-down  
+            modal-fullscreen-xxl-down   class'larını kullanırız.  -->
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kullanıcı Sözleşmesi Kabulu</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                    <!-- todo burada data-bs-dismiss="modal" özelliğini bootstrap kendi içinde bulundurduğu javascript kapatma kodlarını çalıştırsın ve bu butona basıldığında modal kapansın diye butonun içine yazdık -->
+                    <!-- * todo ayrıca butona "btn-close" class'ını verdik, böylece o "kapat" anlamına gelen "x" işaretini modal-header div'inin sağ üst tarafına  getirdik -->
+                </div>
+                <div class="modal-body">
+                    <p>
+
+
+                        1. TARAFLAR
+
+
+                        İşbu Üyelik Sözleşmesi ("Sözleşme"); www.trendyol.com ve mobil cihaz uygulamalarının sahibi olan
+                        ve Maslak Mah. Büyükdere Cad. Noramin İş Merkezi NO:237/6 SARIYER/İSTANBUL adresinde bulunan DSM
+                        GRUP DANIŞMANLIK İLETİŞİM VE SATIŞ TİC. A.Ş. (“DSM”) ile; www.trendyol.com ve mobil uygulamasına
+                        (“Platform”) aşağıdaki şartları kabul ederek üye olan websitesi kullanıcısı veya mobil cihazlara
+                        kurulan uygulamalardan üye olan kullanıcı (“Üye”) arasında, Üye'nin DSM'nin sunduğu
+                        Hizmetler'den yararlanmasına ilişkin koşulların belirlenmesi için akdedilmiştir. DSM ve Üye işbu
+                        Üyelik Sözleşmesi'nde ayrı ayrı “Taraf” birlikte “Taraflar” olarak anılacaklardır.
+
+                        DSM ve Üye işbu Üyelik Sözleşmesi'nde ayrı ayrı "Taraf" birlikte "Taraflar" olarak
+                        anılacaklardır.
+
+                        2. TANIMLAR
+
+
+                        Açık Pazar
+
+                        DSM’nin 6563 sayılı Elektronik Ticaretin Düzenlenmesi Hakkında Kanun uyarınca yalnızca "aracı
+                        hizmet sağlayıcı" ve 5651 sayılı İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu
+                        Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanun uyarınca "yer sağlayıcı"
+                        sıfatıyla Satıcı’lar ile Alıcı’ları Platform üzerinden buluşturarak Satıcı’ların Platform’dan
+                        gerçekleştirdikleri ürün ve/veya hizmet satışlarına ticari temsilci olarak aracılık ettiği
+                        modeli ifade eder.
+
+                        Alıcı
+
+                        Platform’dan ürün ve/veya hizmet satın alan gerçek kişileri ifade eder.
+
+                        Gizlilik Politikası ve Veri Koruma Bildirimi
+
+                        Üyeler’in Platform üzerinden ilettikleri kişisel verilerin, DSM tarafından hangi amaçlarla ve ne
+                        şekilde kullanılacağı gibi konular da dahil olmak üzere DSM’nin kişisel verilere ve çerez
+                        kullanımına ilişkin genel gizlilik politikasını düzenleyen ve Platform üzerinden
+                        https://www.trendyol.com/kisisel_verilerin_korunmasi.html linkinden erişilebilecek olan metni
+                        ifade eder.
+
+                        Hesabım Sayfası
+
+                        Üye’nin Platform’da yer alan çeşitli uygulamalardan ve Hizmetler’den yararlanabilmesi için
+                        gerekli işlemleri gerçekleştirebildiği, kişisel bilgilerini ve uygulama bazında kendisinden
+                        talep edilen bilgilerini girdiği sadece ilgili Üye tarafından belirlenen kullanıcı adı ve şifre
+                        ile erişilebilen Üye’ye özel sayfayı ifade eder.
+
+                        Hizmetler
+
+                        Üyeler’in işbu Üyelik Sözleşmesi içerisinde tanımlı olan iş ve işlemlerini gerçekleştirmelerini
+                        sağlamak amacıyla DSM tarafından ortaya konulan uygulamaları ifade eder.
+
+                        Satıcı
+
+                        Açık Pazar butiklerinde DSM ile yaptığı Satıcı İş Ortaklığı ve İlan Sözleşmesi kapsamında
+                        Platform’a üye olan ve oluşturduğu hesap üzerinden yayınladığı ilanlar aracılığıyla çeşitli ürün
+                        ve/veya hizmetleri satışa arz eden tüzel/gerçek kişi üyeyi ifade eder.
+
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger text-bg-danger" data-bs-dismiss="modal">Reddet</button>
+                    <!-- todo burada data-bs-dismiss="modal" özelliğini bootstrap kendi içinde bulundurduğu javascript kapatma kodlarını çalıştırsın ve bu butona basıldığında modal kapansın diye butonun içine yazdık, data-bs-target="" özelliğine gerek yok çünkü butonlar modal'ın içinde olduğunda buna gerek yoktur, dışındayken gerek vardır. -->
+                    <button class="btn btn-warning text-bg-warning">Kabul Et</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

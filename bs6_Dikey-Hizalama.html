@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kapsayici{
+            height: 500px;
+            width: 1000px;
+
+        }
+        .kutu{
+            /* height: 100px; */
+            width: 200px;
+        }
+    </style>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="d-flex bg-primary text-white justify-content-between align-items-center kapsayici">
+    <div class="kutu bg-warning     align-self-lg-stretch">içerik_1</div>
+    <div class="kutu bg-success     ">içerik_2</div>
+    <div class="kutu bg-danger      align-self-xl-end">içerik_3</div>
+</div>
+
+<!-- bu d-flex verdiğimiz kapsayıcıyı flex-column vermediğimiz kapsayıcı olduğu için burada justify-content yatayda, align-items dikeyde hizalama özelliği olarak çalışır ama flex-column verildiğinde rolleri değişirler. -->
+
+<div class="d-flex bg-secondary text-white flex-column justify-content-around align-items-center kapsayici">
+    <div class="kutu bg-warning ">içerik_1</div>
+    <div class="kutu bg-success">içerik_2</div>
+    <div class="kutu bg-danger align-self-end">içerik_3</div>
+</div>
+<!-- bu örnekte kapsayıcıya d-flex ve flex-column verilmiştir, kapsayıcı flex-column özelliğini aldığı zaman normalde yatayda sıralama yapmak için kullandığımız "justify-content" class'ını dikeyde hizalama yapmak için, normalde dikeyde hizalama yapmak için kullandığımız "align-items" class'ı ise yatayda hizalama yapmak için kullanılır. 
+
+Önemli Not: justify-content-evenly, align-items-around, align-self-baseline, flex-row, flex-column gibi class'lar hep d-flex class'ına bağlı komutlardır, o class olmadan hiçbiri çalışmaz. Ayrıca bu komutlarda da breakpoint class'ları olan lg, xl, xxl gibi classlar verilebilir-->
+
+
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

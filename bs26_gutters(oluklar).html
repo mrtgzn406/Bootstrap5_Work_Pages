@@ -1,0 +1,48 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<!-- * bu sayfada row ve col etiketlerini kullanarak oluşturduğumuz satırda nasıl satır sütunlarının hizalanacağını anlatılmaktadır. Bunun için bootstrap5'te gutters(oluklar) class'larını kullanırız. -->
+
+<!-- ? row class'ına sahip bir kapsayıcının içindeki çocuk etiketler varsayılan olarak zaten bir gutter değerine sahiptir. Bu ise gutter-x: 1.5rem; gutter-y: 0; değeridir.-->
+
+<!-- todo gutters satır sütunları arasındaki boşlukları ayarlamaya yarar, bazı class'ları kullanarak nesnenin gerek dikeyde gerekse yatayda hizalanmasını sağlarız, bunun için program css'teki margin değerini de , padding değerini de kullanabilir. g-x class'ı ile verilir. g-x class'ını kullanırsak nesneye hem x hem de y düzleminde boşluk vermiş oluruz. Eğer sadece x düzleminde nesneler arası eşit boşluk vermek istiyorsak örneğin gx-3 class'ını veririz, eğer sadece y düzleminde boşluk vermek istiyorsak o zaman da mesela gy-4 class'ını veririz. Tüm bu class'larda 1 en küçük değere, 5 en büyük değere tekabül eder  -->
+<!-- ! NOt: bu gutters class'ları yalnızca kapsayıcısına "row" class'ı yazılmış bir etikette etkin olur.  -->
+
+<div class="overflow-hidden">
+    <!-- ! bu class'ı bir satırın kapsayıcısı olarak verirsek olası istenmeyen taşmaları gizlemiş oluruz. -->
+    <div class="row gx-2 gy-5 row-cols-2       text-center bg-secondary">
+        <div >
+            <div class="bg-warning" style="height: 70px"></div>
+        </div>
+        <div >
+            <div class="bg-warning" style="height: 70px"></div>
+        </div>
+        <div >
+            <div class="bg-warning" style="height: 70px"></div>
+        </div>
+        <div >
+            <div class="bg-warning" style="height: 70px"></div>
+        </div>
+        <div >
+            <div class="bg-warning" style="height: 70px"></div>
+        </div>
+        <div >
+            <div class="bg-warning" style="height: 70px"></div>
+        </div>
+
+    </div>
+</div>
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!-- bootstrap 5 taslak html'i -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<div class="table-responsive">
+    <!-- ! bu table-responsive class'ını almış etiket bir tabloya kapsayıcı olarak sarılır, böylelikle tablo ekran genişliklerine duyarlı hâle gelir. -->
+    <table class="table table-warning table-striped table-hover text-capitalize caption-top">
+        <!--burada tablo etiketine table class'ın vererek onun tasarımı güzelleştirdik,
+            table-striped diyerek tablonun çubuklu, şeritli olmasını sağladık, 
+            table-hover diyerek ise fareyle tablonun üzerine gelindiğinde üzerine geldiği kısmın renk tonunun değişmesini sağladık, caption-top diyerek ise normalde <table> etiketinden hemen sonra yazdığımız caption içindeki yazının üstte görünmesini sağladık -->
+                <caption>Öğrenci Bilgisi</caption>
+        <!-- ? Eğer paddingleri yarı yarıya azaltılmış bir tablo istiyorsak o zaman tablonun class'ına table-sm  yazarız.  -->
+        <thead class="table-info">      
+         <!-- table-warning class'ını vererek onun arka plan rengini ayarladık, -->
+            <tr>
+                <th>#</th>
+                <th>isim</th>
+                <th>soyisim</th>
+                <th>numara</th>
+                <th>sınıfı</th>
+                <th>bölümü</th>
+                <th>görüşleri</th>
+            </tr>
+        </thead>
+        <tbody class="table-bordered border-danger">
+            <!-- * table-bordered class'ını vererek tablonun bu kısmının kenarlığı olmasını sağladık,border-danger diyerek ise kenarlığa renk verdik -->
+
+            <tr class="align-middle">
+                <!-- * bu class'la ise satırda dikey hizalama yapıp yazıyı ortaya getirdik-->
+                <th scope="row">1</th>
+                <td >ahmet</td>
+                <td>kuru</td>
+                <td>175</td>
+                <td>1</td>
+                <td >Bilgisayar <br> Programcılığı<br>programı</td>
+                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad exercitationem mollitia suscipit reprehenderit harum aperiam nisi magni nobis atque distinctio sequi, et, dolores laborum illum rerum quam similique perspiciatis deleniti ipsam maiores? Dignissimos assumenda exercitationem tempore libero voluptatum quod rem ea officia expedita dolorum ad, aspernatur, impedit at nesciunt laborum!</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td >yusuf</td>
+                <td>yazıcı</td>
+                <td>847</td>
+                <td>2</td>
+                <td>Adalet</td>
+                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad exercitationem mollitia suscipit reprehenderit harum aperiam nisi magni nobis atque distinctio sequi, et, dolores laborum illum rerum quam similique perspiciatis deleniti ipsam maiores? Dignissimos assumenda exercitationem tempore libero voluptatum quod rem ea officia expedita dolorum ad, aspernatur, impedit at nesciunt laborum!</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td >bekir</td>
+                <td>bokdemirli</td>
+                <td>961</td>
+                <td>3</td>
+                <td>optisyenlik</td>
+                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad exercitationem mollitia suscipit reprehenderit harum aperiam nisi magni nobis atque distinctio sequi, et, dolores laborum illum rerum quam similique perspiciatis deleniti ipsam maiores? Dignissimos assumenda exercitationem tempore libero voluptatum quod rem ea officia expedita dolorum ad, aspernatur, impedit at nesciunt laborum!</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td >ali</td>
+                <td>cebesoy</td>
+                <td>254</td>
+                <td>4</td>
+                <td>Sivil havacılık</td>
+                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad exercitationem mollitia suscipit reprehenderit harum aperiam nisi magni nobis atque distinctio sequi, et, dolores laborum illum rerum quam similique perspiciatis deleniti ipsam maiores? Dignissimos assumenda exercitationem tempore libero voluptatum quod rem ea officia expedita dolorum ad, aspernatur, impedit at nesciunt laborum!</td>
+            </tr>
+        </tbody>
+        <tfoot class="text-center">
+            <tr>
+                <td class="table-dark" colspan="7">tüm hakları saklıdır</td>
+          
+            </tr>
+        </tfoot>
+    </table>
+</div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem fugiat temporibus perspiciatis doloribus unde velit, praesentium quasi debitis provident distinctio neque saepe possimus quod officiis, vitae laudantium animi ullam aut numquam! Fugiat pariatur at, optio iusto, error odit illum, et placeat ex nemo velit! Repellendus, sint provident. Hic voluptatibus tempore nemo nostrum, quaerat possimus eius optio officiis, quidem ipsum omnis. A, cum. Quaerat eos esse asperiores ipsum optio? Reprehenderit quaerat, quos deleniti, totam molestias iure optio eius libero delectus porro explicabo? Asperiores error id placeat debitis illo, blanditiis ut ipsa deserunt aut necessitatibus, facere ipsum aliquid odio cumque dignissimos porro distinctio. Nihil ducimus id sapiente, exercitationem voluptatem ipsum corporis nostrum explicabo consequuntur earum error minus deleniti eos iure, officiis culpa nemo adipisci rem natus vero. Incidunt recusandae, expedita eaque id quis earum suscipit, aperiam itaque corrupti tempora nemo porro ad sed iure nam harum odit distinctio repellat ea eligendi esse doloribus perferendis voluptatem. Reiciendis odit ea doloribus qui beatae nihil aperiam optio nostrum amet illum eligendi aspernatur in expedita, corrupti ex et nisi dolores vero porro temporibus obcaecati dolorum ipsum. Explicabo porro repellat cupiditate voluptates nesciunt nisi magnam aut ipsa ab at! Distinctio odio, quam dolore doloremque ducimus sequi et.</p>
+
+
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

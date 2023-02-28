@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .kapsayici{
+            width: 1000px;
+            height: 400px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .box{
+            width: 150px;
+            height: 100px;
+            display: inline-block;
+
+        }
+
+    </style>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="kapsayici d-flex mx-auto bg-success text-light fs-4 fw-bold mt-5">
+        <div class="box bg-danger">box 1</div>
+        <div class="box bg-warning position-relative ms-5 me-3 p-4  start-0 rounded-pill" style="margin-top: 250px;">box 2</div>
+        <div class="box bg-primary position-relative start-50 rounded-5">box 3</div>
+        <div class="box bg-black">box 4</div>
+
+    </div>
+
+        <!-- todo position: relative özelliğini vermek için position-relative class'ı kullanılır. Relative verdiğimiz nesne, etrafındaki etiketlere göre konumlanır fakat konumu görecelidir, Ondan dolayı yukarıdaki örnekte görüldüğü gibi box 2 relative almış bir etikettir, nesne gerçek konumundan top, left, start, end class'ları ile ayrılsa bile o boş kalan yeri hemen etrafındaki etiketler doldurmaz, sanki etiket hiç oradan ayrılmamış gibi davranır, yani konumu sadece ekranda değişir,  göreceli olarak değişir,  bize göre değişir. Fakat nesne margin ve padding alırsa işte o zaman normal bağlamına göre konum alır, yani etrafındaki etiketlere, kapsayıcıya göre konum alır. 
+        Örneğin bir ms-5 diye bir class'ı box-2'ye verdiğimizden ve etiket soldan boşluk aldığından dolayı onun sağında bulunan etiketler de onun sağa kaymasıyla birlikte sağa kaydı. 
+        Örneğin box 3'e margin-top: 250px; verdik ve o eski konumundan tamamen ayrıldı, buna rağmen oluşan boşluğu diğer etiketler doldurmadı çünkü aslında bir özellik vardı orada, biz css'e margin-top: 250px; yazarak aslında şunu dedik, "bu kapsayıcının üst kenarı ile nesnenin üst kenarı arasında 250px boşluk bırak" demiş oluyoruz , dolayısıyla o boşluğu başkası zaten dolduramaz, tüm bağlamdan çıkmayan nesneler için bu böyledir, bunlar position-static, position-relative ve position-sticky özellikleridir   -->
+
+<!-- ! ayraç  ------------------------------------------------------------------------------------------------------>
+
+<div class="w-50  bg-secondary text-light fs-4 fw-bold position-relative">
+    <div class="box bg-danger">box 1</div>
+    <div class="box bg-warning">box 2</div>
+    <div class="box bg-primary position-absolute ms-5 rounded-circle ">box 3</div>
+    <!-- todo position-absolute class'ı ile sayfada mutlak olarak konumlanmayı sağlayan pozisyondur, position:  absolute; özelliğini vermiş oluyoruz. Position-absolute özelliğini alan nesne margin verildiğinde çevresindeki nesnelere göre hareket eder. Top, left, right, bottom özellikleri verildiğinde ise etiketlere, nesnelere, kapsayıcısına göre değil direkt sayfadaki kenarlara göre kendini konumlandırır. Eğer absolute özelliğine sahip nesne relative özelliğine sahip bir kapsayıcının içindeyse o zaman kendisini sayfaya göre değil kapsayıcının sınırlarına göre konumlandırır, eğer absolute verdiğimiz bir etiketin tüm sayfa içinde değilde bir kapsayıcı içinde absolute olmasını (hareket edebilmesini) istiyorsak bunu yaparız.  -->
+    <!-- ! Fakat eğer position-absolute aldıktan sonra top, left, right , bottom gibi değerler almazsa ilk başta bulunduğu yerde mutlak konumlanır, mesela yukarıdaki örnekte görüldüğü gibi 4 tane kutu yan yanadır ve biz soldan sağa  3. kutu olan box 3'e  ms-5 verdik , position: absolute verdiğimiz box 3 bağlamdan çıktığı için artık bir yer kaplamıyor sayfada ve bundan dolayı onun boşalan yerini box 4 alıyor, box 3 ise normalde aynı yerindeydi hatta kendisinin boşalan yerini dolduran box 4'ün üzerini de tam kaplamıştı ve sayfada bağlamdan çıksa da hâlâ görüntü olarak orada vardı ama şu anda ms-5 class'ını almış ve bağlamdan çıkmış haliyle sayfada görünüyor.  -->
+    <div class="box bg-black">box 4</div>
+
+</div>
+<!-- ! ayraç  ------------------------------------------------------------------------------------------------------>
+
+<div class="kapsayici bg-light border border-5 border-warning">
+    <div id="murat" class="bg-danger top-50 start-50 position-relative translate-middle" style="width: 200px; height:200px;"></div>
+    <!-- todo görüldüğü üzere top-50 ve start-50 verilmesine rağmen nesne tam kapsayıcının ortasında görünmüyor, bunun nedeni top ve start class'ları alan nesnenin hizalamaya kenarlıklardan başlamasıdır, gerek yatay gerekse de dikey eksende hizalamanın eğer nesnenin merkezinden başlamasını istiyorsak translate-middle sınıflarını kullanırız. translate-middle-y , y ekseninde nesnenin başlangıç noktasını ortası yapar, yani ona css'de transform:  "translateY(-50%);" vermiş oluruz; translate-middle-x ise x ekseninde nesnenin başlangıç noktasını ortası yapar, yani css'de transform: "translateX(-50%);" özelliğini verir. tranlate-middle-x ve translate--middle-y özelliklerinin ikisini birden veren class ise translate-middle sınıfıdır bu class ise css'de "transform: translate(-50%, -50%);" özelliğini verir -->
+</div>
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

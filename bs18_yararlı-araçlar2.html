@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            font-size: large;
+        }
+    </style>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container bg-dark text-white p-2">
+        <span class="visually-hidden">Bu yazıyı sadece ekran okuyucu okuyabilir, kullanıcı göremez, görünümsel olarak gizlidir</span> Bu yazıyı ise herkes görür
+        <!-- * bu sınıf ekran okuyucunun bir şeyi o ekran okuyucuyu kullanan insana söylemesi için kullanılır -->
+    </div>
+<!-- ! ayraç ------------------------------------------------------------------------------------------------>
+
+<div class="my-2 bg-success w-25">murat</div>
+<div class="my-2 bg-success w-50">murat</div>
+<div class="my-2 bg-success w-75">murat</div>
+<div class="my-2 bg-success w-100">murat</div>
+<div class="my-2 bg-success w-auto">murat</div>
+<div class="my-2 bg-success mw-100">murat</div><!-- ! bu class ise maksimum genişlik %100 demek için kullanılır ama bu illaki %100 boyutunu alsın demek değildir, mesela bu class verildikten sonra css olarak width: 100px; girilirse etiketin boyutu 100px olur -->
+<!-- bu class'lar oransal olarak genişlik vermek için kullanılır. 
+w-auto etiket kapsayıcısının genişliğini alsın demektir. -->
+<!-- ! ayraç ------------------------------------------------------------------------------------------------>
+
+<div class="d-flex justify-content-between align-items-center" style="height: 500px;">
+    <div class="bg-info h-auto">metin</div>
+    <div class="bg-info mh-100" style="height:1000px ;">metin</div>
+    <!-- *burada ise maximum height %100 demek için mh-100 yazdık, bu ifade yükseklik en fazla %100 olabilir ama %100'den daha aşağıda başka bir değer de yazılabilir demektir. Eğer yükseklik değeri olarak hiçbir değer verilmezse de içeriği kadar yer kaplar.-->
+    <div class="bg-info h-25">metin</div>
+    <div class="bg-info h-50">metin</div>
+    <div class="bg-info h-75">metin</div>
+    <div class="bg-info h-100">metin</div>
+    <div class="bg-info">metin</div>
+</div>
+
+<!-- ! ayraç ------------------------------------------------------------------------------------------------>
+
+
+<div class="container">
+    <div class="vh-25 bg-secondary ">vh-100</div>
+    <!-- * bu vh-x sınıfı ekran boyutu (viewport )oranında yükseklik vermek için kullanılır. Deper olarak 25-50-75-100-auto gibi değerler alır -->
+    <div class="vw-auto bg-info mt-5">vw-75</div>
+    <!-- todo bu vw-x sınıfı ekran boyutu (viewport) oranında genişlik vermek için kullanılır. Değer olarak 25-50-75-100-auto değerlerini alırlar. -->
+</div>
+<!-- ! burada vh-100, vw-100 dışındaki diğer değerler çalışmıyor , sonra bunu incele sebebini öğren  -->
+
+<!-- ! ayraç ------------------------------------------------------------------------------------------------>
+<div class="container ">
+    <span class="box bg-primary align-baseline ">unga bunga</span>
+    <span class="box bg-primary align-bottom">unga bunga</span>
+    <span class="box bg-primary align-middle">unga bunga</span>
+    <span class="box bg-primary align-top">unga bunga</span>
+</div>
+<!-- todo inline elementlerde dikey hizalama için bu sınıflar kullanılır. -->
+<div class="container fst-italic fs-3 fw-bold">
+    <ul>
+        <li><a class="link-danger" href="">LİNK</a></li>
+        <li><a class="link-success" href="">LİNK</a></li>
+        <li><a class="link-secondary" href="">LİNK</a></li>
+        <li><a class="link-dark" href="">LİNK</a></li>
+        <li><a class="link-info" href="">LİNK</a></li>
+        <li><a class="link-light" href="">LİNK</a></li>
+        <li><a class="link-white" href="">LİNK</a></li>
+        <li><a class="link-warning" href="">LİNK</a></li>
+    </ul>
+</div>
+<!-- * bu da linklere renk verme classlarıdır. -->
+<!-- ! ayraç ------------------------------------------------------------------------------------------------>
+<div class="text-truncate" style="width: 200px; height: 400px;">text-truncate sınıfı bir yazı etikete yatay olarak sığmadığında yanına ... koyar, nesnenin bir yüksekliğe sahip olup normalde yazıyı alt satıra geçirmesi de önemsizdir, sadece yazı yatayda sığmadığı an sağına "..." koyar ve geri kalan yazıyı göstermez, sığarsa da hiçbir şey koymaz, yazı normal görünür. </div>
+
+
+<!-- ! ayraç ------------------------------------------------------------------------------------------------>
+
+<p>benim isim murat
+    <span class="vr"></span> gözen
+    <!-- *bu sınıf ise sadece araya hafif bir dik çizgi koymak için kullanılır -->
+</p>
+<!-- ! ayraç ------------------------------------------------------------------------------------------------>
+
+<div class="container">
+    <div class="ratio ratio-1x1">
+        <iframe src="https://www.youtube.com/embed/_vT7xQegCnc?list=PLY20HpFruiK13LB2jTkET4DkJP9eD2HZf" title="Ders 18 Bootstrap 5 Yararlı Araçlar 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- ! framerborder="0" yazmana artık gerek yok, bootstrap5'te artık varsayılan olarak iframe etiketi frameborder="0" olarak geliyor -->
+    </div>
+    <div class="ratio ratio-4x3">
+        <iframe src="https://www.youtube.com/embed/_vT7xQegCnc?list=PLY20HpFruiK13LB2jTkET4DkJP9eD2HZf" title="Ders 18 Bootstrap 5 Yararlı Araçlar 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/_vT7xQegCnc?list=PLY20HpFruiK13LB2jTkET4DkJP9eD2HZf" title="Ders 18 Bootstrap 5 Yararlı Araçlar 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="ratio ratio-21x9">
+        <iframe src="https://www.youtube.com/embed/_vT7xQegCnc?list=PLY20HpFruiK13LB2jTkET4DkJP9eD2HZf" title="Ders 18 Bootstrap 5 Yararlı Araçlar 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+<!--  bu sınıflar ise ekran genişliğine duyarlı video boyutları ayarlamak için kullanılır . İlk önce iframe'i videoyu içinde barındıran etiketin ebeveynine class olarak "ratio" yazarız ardından vermek istediğimiz video boyutu ayarını yazarız "ratio-16x9" gibi... Bu sınıfın 4 kullanım şekli vardır; bunlar:  
+1.) class="ratio ratio-1x1"
+2.) class="ratio ratio-4x3"
+3.) class="ratio ratio-16x9"
+4.) class="ratio ratio-21x9" dur. -->
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

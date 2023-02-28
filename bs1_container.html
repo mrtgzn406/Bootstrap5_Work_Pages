@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+<!-- Not: 
+    1.) bootstrap kütüphanesinin kodlarını kullanabilmek için bootstrap cdn kullanıp ilgili css 
+    linkini head etiketlerinin arasına ve javascript bundle linkini ise body kapanış etiketinin 
+    üstüne koymalıyız, javascript bağlantısını <head> etiketlerinin arasına da koyabiliriz ama
+    o zaman javascript kodları uygulamamızda yüklenmeden uygulama da açılmayacaktır. 
+    2) Bootstrapta kodlar html etiketlerinin class="" özelliği içine yazılır ve sayfaya verilirse direkt etki eder-->
+
+
+
+
+     <div class="container-fluid text-white p-2 my-2 bg-success">
+        <!--container-fluid sınıfı nesneye her zaman %100 genişlik verip yatayda tamamen ekranı kaplamasını sağlar.  -->
+        <h1>bu bir başlık</h1>
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    </div>
+     <div class="container text-white p-2 my-2 bg-primary">
+        <!-- bu normal container sınıfıdır, varsayılan olarak container-sm gibi çalışır.
+        container sınıfının amacı verildiği etiketi yatayda ortalamasıdır-->
+        <h1>bu bir başlık</h1>
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    </div>
+     <div class="container-sm text-white bg-dark p-2 my-2">
+        <!-- container-sm 576px ve yukarısında etiketi sayfada ortalarken, 
+            genişliği 576px'in aşağısına düştüğünde etiket sayfayı yatay olarak 100% kaplar -->
+        <h1>bu bir başlık</h1>
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    </div>
+     <div class="container-md text-white bg-info p-2 my-2">
+        <!-- container-md 768px ve yukarısında etiketi sayfada ortalarken, 
+            genişliği 768px'in aşağısına düştüğünde etiket sayfayı yatay olarak 100% kaplar -->
+        <h1>bu bir başlık</h1>
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    </div>
+     <div class="container-lg text-white bg-danger p-2 my-2">
+            <!-- container-lg 992px ve yukarısında etiketi sayfada ortalarken, 
+            genişliği 992x'in aşağısına düştüğünde etiket sayfayı yatay olarak 100% kaplar -->
+        <h1>bu bir başlık</h1>
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    </div>
+     <div class="container-xl text-white bg-warning p-2 my-2">
+            <!-- container-xl 1200px ve yukarısında etiketi sayfada ortalarken, 
+            genişliği 1200px'in aşağısına düştüğünde etiket sayfayı yatay olarak 100% kaplar -->
+        <h1>bu bir başlık</h1>
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    </div>
+     <div class="container-xxl text-white bg-secondary p-2 my-2">
+        <!-- container-xxl 1400px ve yukarısında etiketi sayfada ortalarken, 
+            genişliği 1400px'in aşağısına düştüğünde etiket sayfayı yatay olarak 100% kaplar -->
+        <h1>bu bir başlık</h1>
+        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+    </div>
+
+    <!-- bu container sınıfı görüldüğü üzere nesneyi yatayda ortalamak ve sağdan, soldan eşit boşluk vermek 
+    için kullanılır. Bu sınfın yanına ek olarak - koyup  yazdığımız sm, md, lg, xl, xxl ise bizim 
+    container verdiğimiz etiketin ne zaman container-fluid özelliğini alacağını
+    belirler -->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
